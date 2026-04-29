@@ -11,7 +11,17 @@
 <link rel="apple-touch-icon" href="./assets/images/Favicon_Samaris.png" />
 <meta property="og:title" content="Samaris Sánchez — Senior AI Product Designer" />
 <meta property="og:description" content="8+ años convirtiendo complejidad en claridad. Fintech, e-commerce, gaming." />
-
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.samarissanchez.com/" />
+<meta property="og:site_name" content="Samaris Sánchez" />
+<meta property="og:locale" content="es_CO" />
+<meta property="og:image" content="https://www.samarissanchez.com/assets/images/perfil.jpg" />
+<meta property="og:image:alt" content="Samaris Sánchez — Senior AI Product Designer · portafolio" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Samaris Sánchez — Senior AI Product Designer" />
+<meta name="twitter:description" content="8+ años convirtiendo complejidad en claridad. Fintech, e-commerce, gaming." />
+<meta name="twitter:image" content="https://www.samarissanchez.com/assets/images/perfil.jpg" />
+<link rel="canonical" href="https://www.samarissanchez.com/" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://api.fontshare.com">
@@ -305,6 +315,99 @@ a { color: inherit; text-decoration: none; }
 [data-theme="light"] .nav__links a::after { background: var(--violet-bright); }
 
 .nav__controls { display: flex; align-items: center; gap: 10px; }
+.nav__tail {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.nav__burger {
+  display: none;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--bg-soft) 88%, transparent);
+  color: var(--ink);
+  cursor: pointer;
+  transition:
+    border-color 0.35s var(--ease-soft),
+    background-color 0.35s var(--ease-soft),
+    box-shadow 0.35s var(--ease-soft);
+}
+.nav__burger:hover {
+  border-color: color-mix(in srgb, var(--violet) 45%, var(--line));
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--violet-bright) 22%, transparent);
+}
+.nav__burger-line {
+  position: relative;
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 1px;
+  transition:
+    background 0.25s var(--ease-soft),
+    transform 0.38s var(--ease-nav-menu);
+}
+.nav__burger-line::before,
+.nav__burger-line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 18px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 1px;
+  transition: transform 0.38s var(--ease-nav-menu), top 0.38s var(--ease-nav-menu);
+}
+.nav__burger-line::before { top: -6px; }
+.nav__burger-line::after { top: 6px; }
+.nav.nav--open .nav__burger-line {
+  background: transparent;
+}
+.nav.nav--open .nav__burger-line::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+.nav.nav--open .nav__burger-line::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+.nav__burger-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.nav__backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 498;
+  background: rgba(0, 0, 0, 0.42);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  opacity: 0;
+  transition: opacity 0.35s var(--ease-soft);
+  pointer-events: none;
+}
+.nav__backdrop.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+body.nav-drawer-open {
+  overflow: hidden;
+}
 
 /* Pill toggle — holds 2 options, one active */
 .pill {
@@ -365,15 +468,75 @@ a { color: inherit; text-decoration: none; }
 .flag svg { width: 100%; height: 100%; display: block; }
 
 @media (max-width: 720px) {
-  .nav__links { display: none; }
+  .nav__burger { display: inline-flex; }
+  .nav__backdrop { display: block; }
+  .nav__links {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: var(--nav-offset, 56px);
+    z-index: 499;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    padding: 14px var(--container-pad) 22px;
+    margin: 0;
+    background: color-mix(in srgb, var(--bg) 92%, transparent);
+    backdrop-filter: blur(18px) saturate(1.15);
+    -webkit-backdrop-filter: blur(18px) saturate(1.15);
+    border-bottom: 1px solid var(--line-soft);
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.35);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition:
+      opacity 0.32s var(--ease-soft),
+      visibility 0.32s,
+      transform 0.42s var(--ease-out);
+  }
+  .nav.nav--open .nav__links {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  .nav__links a {
+    padding: 14px 12px;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    border-radius: 10px;
+    transition: background-color 0.25s var(--ease-soft), color 0.25s;
+  }
+  .nav__links a:hover {
+    background: color-mix(in srgb, var(--violet-bright) 12%, transparent);
+  }
+  .nav__links a::after { display: none; }
+  [data-theme="light"] .nav__links {
+    background: rgba(0, 0, 0, 0.94);
+    border-bottom-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.55);
+  }
+  [data-theme="light"] .nav__links a { color: rgba(255, 255, 255, 0.88); }
+  [data-theme="light"] .nav__links a:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+  }
   .nav { padding: 14px var(--container-pad); }
   .pill__opt { min-width: 30px; height: 26px; padding: 0 8px; font-size: 10px; }
   .pill__opt svg { width: 12px; height: 12px; }
   .flag { width: 12px; height: 12px; }
 }
 @media (max-width: 420px) {
-  .nav__controls { gap: 6px; }
+  .nav__tail { gap: 6px; }
   .pill__opt { padding: 0 7px; }
+}
+@media (min-width: 721px) {
+  .nav__backdrop {
+    display: none !important;
+    pointer-events: none !important;
+  }
 }
 
 /* ============================================================
@@ -4683,14 +4846,15 @@ a { color: inherit; text-decoration: none; }
 </div>
 
 <!-- ========== NAV ========== -->
-<header class="nav">
+<header class="nav" id="siteNav">
   <a href="#top" class="nav__logo">Samaris<span class="dot">.</span></a>
-  <nav class="nav__links">
+  <nav class="nav__links" id="navMenu" aria-label="Principal">
     <a href="#about" data-i18n="nav.about">About</a>
     <a href="#work" data-i18n="nav.work">Work</a>
     <a href="#contact" data-i18n="nav.contact">Contact</a>
   </nav>
-  <div class="nav__controls">
+  <div class="nav__tail">
+    <div class="nav__controls">
     <!-- Theme pill -->
     <div class="pill js-theme-pill" id="themePill" data-pos="0" role="group" aria-label="Theme">
       <span class="pill__thumb" aria-hidden="true"></span>
@@ -4713,8 +4877,14 @@ a { color: inherit; text-decoration: none; }
         <span>EN</span>
       </button>
     </div>
+    </div>
+    <button type="button" class="nav__burger" id="navBurger" aria-expanded="false" aria-controls="navMenu">
+      <span class="nav__burger-line" aria-hidden="true"></span>
+      <span class="nav__burger-sr" data-i18n="nav.menu">Menú</span>
+    </button>
   </div>
 </header>
+<div class="nav__backdrop" id="navBackdrop" aria-hidden="true"></div>
 
 <!-- ========== HERO ========== -->
 <section class="hero" id="top">
@@ -4934,6 +5104,7 @@ const copy = {
     "nav.about": "Sobre mí",
     "nav.work": "Trabajo",
     "nav.contact": "Contacto",
+    "nav.menu": "Menú",
     "nav.back": "Atrás",
     "intro.loading": "Cargando",
     "intro.sub": "Senior AI Product Designer · Colombia",
@@ -5187,6 +5358,7 @@ const copy = {
     "nav.about": "About",
     "nav.work": "Work",
     "nav.contact": "Contact",
+    "nav.menu": "Menu",
     "nav.back": "Back",
     "intro.loading": "Loading",
     "intro.sub": "Senior AI Product Designer · Colombia",
@@ -8256,12 +8428,74 @@ document.getElementById("modal").addEventListener("click", (e) => {
   e.preventDefault();
   goBackFromCaseStudy();
 });
+
+function updateNavOffset() {
+  const nav = document.getElementById("siteNav");
+  if (nav) document.documentElement.style.setProperty("--nav-offset", `${nav.offsetHeight}px`);
+}
+function closeMobileNav() {
+  const nav = document.getElementById("siteNav");
+  const burger = document.getElementById("navBurger");
+  const backdrop = document.getElementById("navBackdrop");
+  if (!nav || !burger) return;
+  nav.classList.remove("nav--open");
+  burger.setAttribute("aria-expanded", "false");
+  document.body.classList.remove("nav-drawer-open");
+  if (backdrop) {
+    backdrop.classList.remove("is-visible");
+    backdrop.setAttribute("aria-hidden", "true");
+  }
+}
+updateNavOffset();
+window.addEventListener("resize", updateNavOffset);
+
+(function initMobileNav() {
+  const nav = document.getElementById("siteNav");
+  const burger = document.getElementById("navBurger");
+  const backdrop = document.getElementById("navBackdrop");
+  const mq = window.matchMedia("(max-width: 720px)");
+  if (!burger || !nav) return;
+  function openMobileNav() {
+    updateNavOffset();
+    nav.classList.add("nav--open");
+    burger.setAttribute("aria-expanded", "true");
+    document.body.classList.add("nav-drawer-open");
+    if (backdrop) {
+      backdrop.classList.add("is-visible");
+      backdrop.setAttribute("aria-hidden", "false");
+    }
+  }
+  function toggleNav() {
+    if (nav.classList.contains("nav--open")) closeMobileNav();
+    else openMobileNav();
+  }
+  burger.addEventListener("click", (e) => {
+    e.stopPropagation();
+    toggleNav();
+  });
+  if (backdrop) backdrop.addEventListener("click", closeMobileNav);
+  document.querySelectorAll("#navMenu a").forEach((a) => {
+    a.addEventListener("click", () => {
+      if (mq.matches) closeMobileNav();
+    });
+  });
+  window.addEventListener("resize", () => {
+    if (!mq.matches) closeMobileNav();
+  });
+})();
+
 document.addEventListener("keydown", (e) => {
   if (e.key !== "Escape") return;
   const lb = document.getElementById("imgLightbox");
   if (lb && lb.classList.contains("is-open")) {
     e.preventDefault();
     window.closeImgLightbox();
+    return;
+  }
+  const siteNav = document.getElementById("siteNav");
+  if (siteNav && siteNav.classList.contains("nav--open")) {
+    e.preventDefault();
+    closeMobileNav();
     return;
   }
   closeModal();
@@ -8283,7 +8517,7 @@ function animateCursor() {
 }
 animateCursor();
 
-const hoverSel = "a, button, .card, .tab, .modal__next, .social, .nav__logo, .gallery__item";
+const hoverSel = "a, button, .card, .tab, .modal__next, .social, .nav__logo, .nav__burger, .gallery__item";
 document.addEventListener("mouseover", (e) => {
   if (e.target.closest(hoverSel)) cursorRing.classList.add("hover");
 });
