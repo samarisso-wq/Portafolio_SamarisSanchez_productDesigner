@@ -2020,6 +2020,55 @@ body.nav-drawer-open {
   --amb-sp9x: 94%;
   --amb-sp9y: 84%;
 }
+#modal[data-case-id="belcorpHome"] {
+  --amb-drift-anim: modal-blob-drift-c;
+  --amb-1-left: 6%;
+  --amb-1-top: 10%;
+  --amb-1-size: 460px;
+  --amb-1-size-vw: 58vw;
+  --amb-1-gcx: 44%;
+  --amb-1-gcy: 46%;
+  --amb-1-op: 0.48;
+  --amb-1-delay: -3s;
+  --amb-2-right: 6%;
+  --amb-2-top: 36%;
+  --amb-2-size: 400px;
+  --amb-2-size-vw: 50vw;
+  --amb-2-gcx: 50%;
+  --amb-2-gcy: 48%;
+  --amb-2-op: 0.4;
+  --amb-2-delay: -9s;
+  --amb-3-left: 44%;
+  --amb-3-bottom: 10%;
+  --amb-3-size: 360px;
+  --amb-3-size-vw: 48vw;
+  --amb-3-gcx: 46%;
+  --amb-3-gcy: 52%;
+  --amb-3-op: 0.34;
+  --amb-3-delay: -14s;
+  --amb-sp-ox: 48%;
+  --amb-sp-oy: 36%;
+  --amb-sp-orx: 86%;
+  --amb-sp-ory: 70%;
+  --amb-sp1x: 74%;
+  --amb-sp1y: 20%;
+  --amb-sp2x: 22%;
+  --amb-sp2y: 34%;
+  --amb-sp3x: 54%;
+  --amb-sp3y: 60%;
+  --amb-sp4x: 40%;
+  --amb-sp4y: 76%;
+  --amb-sp5x: 88%;
+  --amb-sp5y: 48%;
+  --amb-sp6x: 14%;
+  --amb-sp6y: 64%;
+  --amb-sp7x: 64%;
+  --amb-sp7y: 28%;
+  --amb-sp8x: 8%;
+  --amb-sp8y: 50%;
+  --amb-sp9x: 90%;
+  --amb-sp9y: 80%;
+}
 [data-theme="light"] .modal__blob--1 {
   opacity: calc(var(--amb-1-op) * 0.64);
 }
@@ -4447,6 +4496,330 @@ body.nav-drawer-open {
   color: var(--banco-accent-on-light);
 }
 
+/* Somos Belcorp — Home (acento violeta · tarjetas y bloques específicos) */
+.modal--banco.modal--belcorp {
+  --banco-accent: #a855f7;
+  --banco-accent-on-light: #6b21a8;
+}
+.modal--banco.modal--belcorp .belcorp-insights-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 2.2vw, 20px);
+  margin-top: 18px;
+}
+@media (max-width: 900px) {
+  .modal--banco.modal--belcorp .belcorp-insights-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.modal--banco.modal--belcorp .belcorp-insight-card {
+  padding: clamp(18px, 3vw, 24px);
+  border-radius: 14px;
+  border: 1px solid color-mix(in srgb, var(--banco-accent) 35%, var(--line));
+  background: color-mix(in srgb, var(--banco-accent) 8%, var(--bg-elev));
+}
+[data-theme="light"] .modal--banco.modal--belcorp .belcorp-insight-card {
+  background: color-mix(in srgb, var(--banco-accent) 6%, #fff);
+  border-color: color-mix(in srgb, var(--banco-accent) 22%, var(--line));
+}
+.modal--banco.modal--belcorp .belcorp-insight-card p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.modal--banco.modal--belcorp .belcorp-hypo-zone {
+  border-radius: 18px;
+  padding: clamp(22px, 4vw, 40px);
+  background: linear-gradient(155deg, #ede9fe 0%, #d8b4fe 42%, #a855f7 100%);
+}
+.modal--banco.modal--belcorp .belcorp-hypo-zone .belcorp-hypo-intro {
+  text-align: center;
+  margin: 0 auto 22px;
+  max-width: 44rem;
+  color: rgba(59, 7, 100, 0.92);
+  font-size: clamp(15px, 2vw, 17px);
+  line-height: 1.62;
+}
+.modal--banco.modal--belcorp .belcorp-hypo-main {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 52rem;
+  font-size: clamp(16px, 2vw, 18px);
+  line-height: 1.62;
+  font-weight: 500;
+  color: #250038;
+}
+.modal--banco.modal--belcorp .belcorp-hypo-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 28px;
+}
+@media (max-width: 920px) {
+  .modal--banco.modal--belcorp .belcorp-hypo-cards {
+    grid-template-columns: 1fr;
+  }
+}
+.modal--banco.modal--belcorp .belcorp-hypo-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 18px 18px 20px;
+  box-shadow: 0 14px 40px rgba(45, 0, 80, 0.12);
+  border: 1px solid transparent;
+}
+.modal--banco.modal--belcorp .belcorp-hypo-card--accent {
+  border-color: #3b82f6;
+}
+.modal--banco.modal--belcorp .belcorp-hypo-card__title {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #5b21b6;
+  font-size: 15px;
+}
+.modal--banco.modal--belcorp .belcorp-hypo-card p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: #334155;
+}
+.modal--banco.modal--belcorp .belcorp-approach-intro {
+  text-align: center;
+  max-width: 48rem;
+  margin: 0 auto 28px;
+}
+.modal--banco.modal--belcorp .belcorp-approach-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 3vw, 28px);
+  max-width: 56rem;
+  margin: 0 auto;
+  align-items: start;
+}
+@media (max-width: 820px) {
+  .modal--banco.modal--belcorp .belcorp-approach-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.modal--banco.modal--belcorp .belcorp-approach-card {
+  text-align: center;
+  padding: 20px 16px;
+  border-radius: 14px;
+  border: 1px solid color-mix(in srgb, var(--banco-accent) 32%, var(--line));
+  background: color-mix(in srgb, var(--banco-accent) 6%, var(--bg-elev));
+}
+.modal--banco.modal--belcorp .belcorp-approach__icon {
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 14px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--banco-accent) 18%, transparent);
+  color: var(--banco-accent);
+}
+.modal--banco.modal--belcorp .belcorp-approach__icon svg {
+  width: 26px;
+  height: 26px;
+  stroke: currentColor;
+  fill: none;
+}
+.modal--banco.modal--belcorp .belcorp-approach__h {
+  font-weight: 600;
+  color: var(--banco-accent);
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+}
+.modal--banco.modal--belcorp .belcorp-approach__sub {
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: var(--ink);
+}
+.modal--banco.modal--belcorp .belcorp-approach__p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.56;
+  color: var(--ink-2);
+}
+.modal--banco.modal--belcorp .belcorp-stairs-intro {
+  max-width: 44rem;
+  margin-bottom: 22px;
+}
+.modal--banco.modal--belcorp .belcorp-stairs {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 52rem;
+  margin-left: auto;
+}
+.modal--banco.modal--belcorp .belcorp-stair {
+  display: grid;
+  grid-template-columns: 6px minmax(0, 1fr);
+  gap: 16px;
+  padding-left: clamp(0px, 3vw, 24px);
+  border-left: none;
+}
+.modal--banco.modal--belcorp .belcorp-stair__rule {
+  width: 6px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #7c3aed, #ddd6fe);
+  min-height: 100%;
+}
+.modal--banco.modal--belcorp .belcorp-stair__copy h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.modal--banco.modal--belcorp .belcorp-stair__copy p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.56;
+  color: var(--ink-2);
+}
+.modal--banco.modal--belcorp .belcorp-stair--1 {
+  padding-left: 0;
+}
+.modal--banco.modal--belcorp .belcorp-stair--2 {
+  padding-left: clamp(12px, 4vw, 48px);
+}
+.modal--banco.modal--belcorp .belcorp-stair--3 {
+  padding-left: clamp(22px, 8vw, 96px);
+}
+.modal--banco.modal--belcorp .belcorp-stair--4 {
+  padding-left: clamp(34px, 12vw, 140px);
+}
+.modal--banco.modal--belcorp .belcorp-validation-zone {
+  border-radius: 18px;
+  padding: clamp(22px, 4vw, 36px);
+  background: linear-gradient(180deg, #ede9fe 0%, color-mix(in srgb, #ede9fe 45%, var(--bg-elev)) 100%);
+}
+.modal--banco.modal--belcorp .belcorp-val-intro {
+  text-align: center;
+  margin: 0 auto 26px;
+  max-width: 48rem;
+  font-size: 15px;
+  line-height: 1.65;
+}
+.modal--banco.modal--belcorp .belcorp-val-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 36rem;
+  margin: 0 auto;
+}
+.modal--banco.modal--belcorp .belcorp-val-card {
+  background: var(--bg-elev);
+  border-radius: 14px;
+  padding: 20px 22px;
+  box-shadow: 0 12px 36px rgba(15, 23, 42, 0.08);
+  border: 1px solid color-mix(in srgb, var(--banco-accent) 20%, var(--line));
+}
+.modal--banco.modal--belcorp .belcorp-val-card h3 {
+  margin: 0 0 12px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.modal--banco.modal--belcorp .belcorp-val-card ul {
+  margin: 0;
+  padding-left: 1.2em;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink-2);
+}
+.modal--banco.modal--belcorp .belcorp-val-card li + li {
+  margin-top: 8px;
+}
+.modal--banco.modal--belcorp .belcorp-ai-intro {
+  text-align: center;
+  max-width: 48rem;
+  margin: 0 auto 20px;
+}
+.modal--banco.modal--belcorp .belcorp-ai-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 22px;
+}
+@media (max-width: 920px) {
+  .modal--banco.modal--belcorp .belcorp-ai-cards {
+    grid-template-columns: 1fr;
+  }
+}
+.modal--banco.modal--belcorp .belcorp-ai-card {
+  padding: 18px;
+  border-radius: 14px;
+  border: 1px solid color-mix(in srgb, var(--banco-accent) 26%, var(--line));
+  background: var(--bg-elev);
+}
+.modal--banco.modal--belcorp .belcorp-ai-card h3 {
+  margin: 0 0 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #6d28d9;
+}
+.modal--banco.modal--belcorp .belcorp-ai-card ul {
+  margin: 0;
+  padding-left: 1.15em;
+  font-size: 14px;
+  line-height: 1.54;
+}
+.modal--banco.modal--belcorp .belcorp-ai-card li + li {
+  margin-top: 6px;
+}
+.modal--banco.modal--belcorp .belcorp-ai-outro {
+  text-align: center;
+  margin: 0 auto 26px;
+  max-width: 46rem;
+  font-size: 14px;
+  line-height: 1.62;
+}
+.modal--banco.modal--belcorp .belcorp-ai-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(22px, 6vw, 48px);
+  padding-top: 8px;
+}
+.modal--banco.modal--belcorp .belcorp-ai-logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 4px 6px;
+}
+.modal--banco.modal--belcorp .belcorp-ai-logo-img {
+  max-height: 36px;
+  width: auto;
+  max-width: min(148px, 32vw);
+  object-fit: contain;
+  vertical-align: middle;
+  display: block;
+}
+.modal--banco.modal--belcorp .belcorp-ai-logo-img--claude {
+  max-height: 34px;
+}
+.modal--banco.modal--belcorp .belcorp-ai-logo-img--stitch {
+  max-height: 32px;
+}
+
+.modal--banco.modal--belcorp .belcorp-proto-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.modal--banco.modal--belcorp .belcorp-proto-fig {
+  margin: 0;
+}
+.modal--banco.modal--belcorp .belcorp-proto-fig figcaption {
+  margin-top: 8px;
+  font-size: 13px;
+  opacity: 0.85;
+  text-align: center;
+}
+
 /* Scroll reveal (casos con layout enriquecido: VËRA, Bre-B, Identity, …) */
 .vera-reveal,
 .breb-reveal,
@@ -4983,13 +5356,13 @@ body.nav-drawer-open {
       <div class="eyebrow">[ 003 ] <span>Trabajo seleccionado</span></div>
       <h2 class="work__title">Casos de <em>estudio</em></h2>
     </div>
-    <div class="work__count" id="wCount">6 proyectos</div>
+    <div class="work__count" id="wCount">7 proyectos</div>
   </div>
 
   <div class="tabs" id="tabs" role="tablist">
-    <button class="tab on" data-f="all"><span>Todo</span><span class="badge">6</span></button>
+    <button class="tab on" data-f="all"><span>Todo</span><span class="badge">7</span></button>
     <button class="tab" data-f="fintech"><span>Fintech</span><span class="badge">5</span></button>
-    <button class="tab" data-f="ecommerce"><span>E-commerce</span><span class="badge">1</span></button>
+    <button class="tab" data-f="ecommerce"><span>E-commerce</span><span class="badge">2</span></button>
   </div>
 
   <ul class="list" id="list"></ul>
@@ -5174,6 +5547,52 @@ const copy = {
     },
 
     projects: [
+      {
+        id: "belcorpHome",
+        category: "ecommerce",
+        cat: "E-commerce · UX",
+        client: "Belcorp · Somos Belcorp",
+        year: "2025",
+        title: "Home — Propuesta de rediseño · Belcorp",
+        word: "Belcorp",
+        sub: "Simplificar la experiencia para mejorar los resultados de las consultoras.",
+        tag: "Producto · UX · Mobile · Venta directa",
+        accent: "#A855F7",
+        textColor: "#FAF5FF",
+        meta: { role: "Senior AI Product Designer", team: "—", duration: "Propuesta", platform: "App móvil" },
+        context:
+          "Somos Belcorp ayuda a las consultoras a administrar y hacer crecer su negocio: explorar ofertas, realizar pedidos y aumentar sus ingresos, con foco en vender mejor y tomar decisiones más claras.",
+        challenge:
+          "Rediseñar el Home para que sea más simple y ayude a las consultoras a mejorar sus resultados de negocio.",
+        approach:
+          "Lean UX enfocado en impacto: entender problema e hipótesis, una solución centrada en claridad y \"siguiente acción\", y un plan explícito de medición.",
+        pillars: [
+          {
+            num: "01",
+            title: "Claridad y jerarquía",
+            body: "Si el Home reduce el contenido que compite y prioriza lo esencial, la consultora entiende antes qué hacer."
+          },
+          {
+            num: "02",
+            title: "Visibilidad del negocio",
+            body: "Si ingresos, estado del pedido y alertas clave son más visibles, se actúa con menos fricción."
+          },
+          {
+            num: "03",
+            title: "Acción guiada",
+            body: "Si se destaca una sola acción siguiente clara, se navega menos y se completan tareas prioritarias con más facilidad."
+          }
+        ],
+        solution:
+          "Nueva estructura en cuatro niveles: estado del negocio, siguiente acción, oportunidades de ganancia y recomendaciones inteligentes.",
+        outcome:
+          "La propuesta prioriza necesidades clave —especialmente el seguimiento del pedido— y reduce la carga cognitiva con una estructura más funcional y centrada en la consultora.",
+        stats: [
+          { num: "<em>01</em>", lbl: "Propuesta UX/UI" },
+          { num: "<em>Lean</em>", lbl: "Enfoque" }
+        ],
+        behanceUrl: "https://www.behance.net/samarissanchezo"
+      },
       {
         id: "brebWhatsapp", category: "fintech", cat: "Fintech",
         client: "Grupo Aval - Colombia", year: "2025",
@@ -5428,6 +5847,52 @@ const copy = {
     },
 
     projects: [
+      {
+        id: "belcorpHome",
+        category: "ecommerce",
+        cat: "E-commerce · UX",
+        client: "Belcorp · Somos Belcorp",
+        year: "2025",
+        title: "Home Redesign Proposal · Belcorp",
+        word: "Belcorp",
+        sub: "Simplifying the experience to improve consultant results.",
+        tag: "Product · UX · Mobile · Direct selling",
+        accent: "#A855F7",
+        textColor: "#FAF5FF",
+        meta: { role: "Senior AI Product Designer", team: "—", duration: "Proposal", platform: "Mobile app" },
+        context:
+          "Somos Belcorp helps consultants manage and grow their business: explore offers, place orders, and increase earnings — focused on selling more and making clearer business decisions.",
+        challenge:
+          "Redesign the Home to make it simpler and help consultants improve their business results.",
+        approach:
+          "Lean UX focused on impact: clarify the problem and hypotheses, ship a hierarchy built around clarity and \"next actions\", and specify how to measure success.",
+        pillars: [
+          {
+            num: "01",
+            title: "Clarity and hierarchy",
+            body: "If the Home reduces competing content and prioritizes what matters, consultants understand faster what to do next."
+          },
+          {
+            num: "02",
+            title: "Business visibility",
+            body: "If earnings, order status, and key alerts are more visible, people act with less friction."
+          },
+          {
+            num: "03",
+            title: "Guided action",
+            body: "If one clear next action stands out, navigation drops and priority tasks finish more easily."
+          }
+        ],
+        solution:
+          "A four-level structure: business status, next action, earnings opportunities, and smart recommendations.",
+        outcome:
+          "The proposal centers key needs — especially order tracking — and lowers cognitive load through clearer structure, moving from a promotion-heavy layout to a more functional, consultant-first experience.",
+        stats: [
+          { num: "<em>01</em>", lbl: "UX/UI proposal" },
+          { num: "<em>Lean</em>", lbl: "Approach" }
+        ],
+        behanceUrl: "https://www.behance.net/samarissanchezo"
+      },
       {
         id: "brebWhatsapp", category: "fintech", cat: "Fintech",
         client: "Grupo Aval - Colombia", year: "2025",
@@ -5699,6 +6164,7 @@ function visualFor(id) {
   const svgs = {
     wompy: `<img src="assets/images/work/wompy/wompy_work.png" alt="Wompy · Solicitud y activación del datáfono en Guatemala" loading="lazy" decoding="async" />`,
     nequi: `<img src="assets/images/work/Nequi/Nequi.png" alt="Nequi · Ruta de transición de Persona natural a Persona jurídica" loading="lazy" decoding="async" />`,
+    belcorpHome: `<img src="assets/images/work/Belcorp/portada_bercorp.png" alt="Somos Belcorp — Propuesta rediseño Home · portada" loading="lazy" decoding="async" />`,
     brebWhatsapp: `<img src="assets/images/work/Bre-B/WhatsAPP.png" alt="Bre-B · Transferencias por WhatsApp · Grupo Aval" loading="lazy" decoding="async" />`,
     vera: `<img src="assets/images/work/vera/Falabella.jpg" alt="VËRA · Cotizador de productos · Falabella Group" loading="lazy" decoding="async" />`,
     identityBdb: `<img src="assets/images/work/Identity/Identity.jpg" alt="Flujo Validación de identidad · Banco de Bogotá" loading="lazy" decoding="async" />`,
@@ -8234,7 +8700,522 @@ function buildVeraCaseHtml(p, t, next) {
     ${modalFooterHtml(next, t)}`;
 }
 
+const BEL_IMG = {
+  wireframes: "assets/images/work/Belcorp/wireframes_belcorp.png",
+  mockups: "assets/images/work/Belcorp/muckup_belcorp.png",
+  aiLogos: {
+    chatgpt: "assets/images/work/Belcorp/chat.png",
+    claude: "assets/images/work/Belcorp/claude.png",
+    stitch: "assets/images/work/Belcorp/stitch.png"
+  }
+};
+const BEL_VID = {
+  sinPedido: "assets/Videos/Belcorp/sin_pedido.mp4",
+  conPedido: "assets/Videos/Belcorp/con_pedido.mp4"
+};
+
+function buildBelcorpCaseHtml(p, t, next) {
+  const es = currentLang === "es";
+  const IC = {
+    think: `<svg viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.65" d="M9 18h6M10 21h4M12 4a6 6 0 018 11.18V16H4v-.82A6 6 0 0112 4z"/></svg>`,
+    make: `<svg viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.65" d="M12 20h9M16.5 3.5a2.12 2.12 0 013 3L8 18l-4 1 1-4L16.5 3.5z"/></svg>`,
+    check: `<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="9" stroke-width="1.65"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.65" d="M9 12l2 2 4-4"/></svg>`
+  };
+
+  const B = es
+    ? {
+        s1Tag: "Reto · contexto",
+        chH: "El reto",
+        chBody:
+          "Rediseñar el Home para que sea más simple y ayude a las consultoras a mejorar sus resultados de negocio.",
+        ctxH: "Contexto",
+        ctxBody:
+          "Somos Belcorp es una plataforma que ayuda a las consultoras a administrar y hacer crecer su negocio; la utilizan para explorar ofertas, realizar pedidos y aumentar sus ingresos. El objetivo principal es ayudarlas a vender más y tomar mejores decisiones de negocio.",
+        s2Tag: "El problema",
+        probH: "El problema",
+        probBody:
+          "Hoy el Home muestra muchas funciones, promociones y contenidos al mismo tiempo, lo que dificulta que la consultora entienda qué es lo más importante y qué hacer después. Información clave del negocio —como ingresos, estado del pedido y próximas acciones— no está lo suficientemente visible ni priorizada. Como resultado, la consultora dedica más tiempo a pensar y navegar, lo que frena su capacidad de actuar y hacer crecer el negocio.",
+        s3Tag: "Insights",
+        insH: "Insights clave",
+        insights: [
+          "Las consultoras no se atoran por falta de opciones, sino por falta de claridad.",
+          "Necesitan entender cómo sus acciones impactan sus ingresos.",
+          "Para perfiles con menor digitalización, demasiadas opciones aumentan la confusión y ralentizan la decisión."
+        ],
+        s4Tag: "Hipótesis",
+        hypLead: "",
+        hypMain:
+          "Si el Home se simplifica, la información clave del negocio es más visible y la siguiente acción está claramente guiada, las consultoras tomarán decisiones más rápidas y mejorarán sus resultados.",
+        hypSupport: [
+          {
+            t: "Claridad y jerarquía",
+            body: "Si el Home reduce contenido competidor y prioriza lo más importante, la consultora entiende antes qué debe hacer después."
+          },
+          {
+            t: "Visibilidad del negocio",
+            body: "Si ingresos, estado del pedido y alertas clave son más visibles, habrá más confianza y se actuará con menos fricción."
+          },
+          {
+            t: "Acción guiada",
+            body: "Si el Home destaca una sola acción siguiente clara, se navega menos y se completan más fácilmente las tareas clave."
+          }
+        ],
+        s5Tag: "Mi enfoque",
+        apTitle: "Enfoque Lean UX centrado en impacto de negocio",
+        apIntro:
+          "Seguí un enfoque Lean UX para concentrarme en una oportunidad concreta y resolverla con claridad: entendiendo el problema y definiendo una hipótesis clara; diseñando una solución acotada; y especificando cómo medir su impacto.",
+        apSteps: [
+          {
+            icon: IC.think,
+            h: "Think",
+            sub: "Entender el problema",
+            d: "Analizar el Home actual, necesidades de usuario y objetivos de negocio para ubicar las fricciones y definir una hipótesis UX clara."
+          },
+          {
+            icon: IC.make,
+            h: "Make",
+            sub: "Diseñar la solución",
+            d: "Crear una nueva estructura centrada en claridad y siguiente acción; destacar oportunidades de ingreso y construir una propuesta UI con jerarquía evidente."
+          },
+          {
+            icon: IC.check,
+            h: "Check",
+            sub: "Medir impacto",
+            d: "Definir métricas de éxito para evaluar comprensión, acciones más rápidas y resultados como completitud de pedidos y ventas."
+          }
+        ],
+        s6Tag: "Nueva estructura del Home",
+        stIntro:
+          "El nuevo Home está pensado para guiar a la consultora con pasos claros y priorizados, ayudándola a entender su negocio y actuar más rápido.",
+        stairs: [
+          {
+            ti: "1. Estado del negocio",
+            b: "Muestra estado de campaña, avance del pedido e ingresos para dar contexto inmediato."
+          },
+          { ti: "2. Siguiente acción", b: "Resalta una acción única para reducir fricción y orientar." },
+          { ti: "3. Oportunidades de ganancia", b: "Muestra cómo puede aumentar sus ingresos según su actividad." },
+          {
+            ti: "4. Recomendaciones inteligentes",
+            b: "Sugiere productos y combos según oportunidades de venta."
+          }
+        ],
+        s7Tag: "Wireframes",
+        wfCap: "Wireframes — estructura y jerarquía del Home",
+        s8Tag: "Mockups",
+        mkCap: "Mockups — propuesta visual",
+        s9Tag: "Validación de la solución",
+        valIntro:
+          "Para validar la propuesta nos enfocamos en medir cuán fácil es acceder a la información crítica, en especial el seguimiento del pedido, y si la nueva estructura mejora la claridad y reduce la carga cognitiva. La evaluación combina pruebas de usabilidad y métricas de comportamiento.",
+        metrics: [
+          {
+            ti: "Métricas de usabilidad",
+            items: [
+              "Tiempo para encontrar el estado del pedido (tareas cronometradas en test).",
+              "Precisión del primer clic (% que aciertan la zona en el primer intento).",
+              "Tasa de error (intentos fallidos durante la tarea)."
+            ]
+          },
+          {
+            ti: "Métricas de comportamiento",
+            items: [
+              "CTR en “Rastrear pedido” / seguimiento (analítica).",
+              "Interacción con acciones rápidas (clicks en atajos: catálogos, pedidos, etc.)."
+            ]
+          },
+          {
+            ti: "Percepción",
+            items: [
+              "Customer Effort Score (CES): “Fue fácil encontrar lo que necesitaba” (encuesta posterior al test).",
+              "Satisfacción percibida (escala 1–5 después de interactuar)."
+            ]
+          }
+        ],
+        s10Tag: "IA en el proceso",
+        aiIntro:
+          "La IA se usó como apoyo en distintas etapas para acelerar ideación, ganar claridad y validar decisiones rápido, manteniendo criterio humano y principios de UX.",
+        aiCards: [
+          {
+            t: "Investigación e insights",
+            items: [
+              "Explorar la experiencia actual y detectar problemas de uso.",
+              "Formular problema, insights e hipótesis iniciales."
+            ]
+          },
+          {
+            t: "Ideación y estructura",
+            items: [
+              "Explorar ideas de maquetación y jerarquía de contenido.",
+              "Definir la estructura del Home y priorizar elementos.",
+              "Refinar UX writing."
+            ]
+          },
+          {
+            t: "Prototipo y validación",
+            items: [
+              "Generación de assets visuales y piezas UI.",
+              "Prototipar interacciones con Claude (modo Diseño).",
+              "Simular escenarios tempranos de validación."
+            ]
+          }
+        ],
+        aiOutro:
+          "La IA funcionó como herramienta de co-creación: más velocidad para explorar e iterar, con decisiones guiadas por necesidades de usuario y buenas prácticas de UX.",
+        s11Tag: "Conclusiones · prototipo",
+        concH: "Conclusiones",
+        concBody:
+          "Esta propuesta prioriza la experiencia del Home atendiendo necesidades centrales —especialmente el seguimiento del pedido— y reduce la carga cognitiva con una estructura más clara y mejor jerarquía de contenido. Al mover el diseño de un enfoque dominado por promociones hacia uno más funcional y centrado en la consultora, la propuesta busca acelerar la toma de decisiones y hacer la experiencia más intuitiva.",
+        capV1: "Prototipo — flujo sin pedido abierto",
+        capV2: "Prototipo — flujo con pedido abierto",
+        logoGptLabel: "ChatGPT",
+        logoClaudeLabel: "Claude",
+        logoStitchLabel: "Stitch"
+      }
+    : {
+        s1Tag: "Challenge · context",
+        chH: "The challenge",
+        chBody:
+          "Redesign the Home to make it simpler and help consultants improve their business results.",
+        ctxH: "Context",
+        ctxBody:
+          "Somos Belcorp is a platform that helps consultants manage and grow their business. They use it to explore offers, place orders and increase their earnings — focused on selling more and making better business decisions.",
+        s2Tag: "The problem",
+        probH: "The problem",
+        probBody:
+          "Today, the Home shows many features, promotions and content at the same time, making it difficult for consultants to understand what is most important and what they should do next. Key business information like earnings, order status and next actions is not clearly visible or prioritized. As a result, consultants spend more time thinking and navigating, which slows down their ability to take action and grow their business.",
+        s3Tag: "Key insights",
+        insH: "Key insights",
+        insights: [
+          "Consultants don't struggle because of lack of options, but because of lack of clarity.",
+          "Consultants need to understand how their actions impact their earnings.",
+          "For non-digital-native users, too many options increase confusion and slow down decision-making."
+        ],
+        s4Tag: "Hypothesis",
+        hypLead: "",
+        hypMain:
+          "If the Home is simplified, key business information is made more visible, and the next action is clearly guided, consultants will make faster decisions and improve their business results.",
+        hypSupport: [
+          {
+            t: "Clarity and hierarchy",
+            body: "If the Home reduces competing content and prioritizes the most important information, consultants will understand faster what they need to do next."
+          },
+          {
+            t: "Business visibility",
+            body: "If earnings, order status and key alerts are more visible, consultants will feel more confident and take action with less friction."
+          },
+          {
+            t: "Guided action",
+            body: "If the Home highlights one clear next action, consultants will navigate less, act faster and complete key tasks more easily."
+          }
+        ],
+        s5Tag: "My approach",
+        apTitle: "Lean UX approach focused on business impact",
+        apIntro:
+          "I followed a Lean UX approach to focus on a specific opportunity and solve it with clarity: understanding the problem and defining a hypothesis, designing a focused solution, and specifying how to measure impact.",
+        apSteps: [
+          {
+            icon: IC.think,
+            h: "Think",
+            sub: "Understand the problem",
+            d: "Analyze the current Home, user needs and business goals to identify key friction points and define a clear UX hypothesis."
+          },
+          {
+            icon: IC.make,
+            h: "Make",
+            sub: "Design the solution",
+            d: "Create a new Home structure focused on clarity and next actions — highlight earnings opportunities and build a UI proposal with clear hierarchy."
+          },
+          {
+            icon: IC.check,
+            h: "Check",
+            sub: "Measure impact",
+            d: "Define success metrics to evaluate understanding, faster actions and business outcomes like order completion and sales."
+          }
+        ],
+        s6Tag: "New Home structure",
+        stIntro:
+          "The new Home guides the consultant through clear, prioritized steps so she understands her business and takes action faster.",
+        stairs: [
+          {
+            ti: "1. Business status",
+            b: "Shows campaign status, order progress and earnings to give immediate context."
+          },
+          { ti: "2. Next action", b: "Highlights one clear action to reduce decision-making and guide the user." },
+          {
+            ti: "3. Earnings opportunities",
+            b: "Shows how she can increase her earnings based on her activity."
+          },
+          {
+            ti: "4. Smart recommendations",
+            b: "Suggests products and bundles based on sales opportunities."
+          }
+        ],
+        s7Tag: "Wireframes",
+        wfCap: "Wireframes — Home structure proposal",
+        s8Tag: "Mockups",
+        mkCap: "Mockups — visual proposal",
+        s9Tag: "Solution validation",
+        valIntro:
+          "To validate the proposed redesign, we focus on measuring how easily users access key information — especially order tracking — and whether the structure improves clarity and lowers cognitive load. The evaluation mixes usability testing and behavioral metrics.",
+        metrics: [
+          {
+            ti: "Usability metrics",
+            items: [
+              "Time to find order status (task timing in moderated tests).",
+              "First Click Accuracy (% who hit the correct area on the first attempt).",
+              "Error rate (failed attempts during tasks)."
+            ]
+          },
+          {
+            ti: "Behavior metrics",
+            items: ['CTR on “Track order” (analytics, click tracking).', "Interaction with quick actions (clicks on key shortcuts — catalogs, orders, etc.)."]
+          },
+          {
+            ti: "Perception metrics",
+            items: [
+              'Customer Effort Score (CES): “It was easy to find what I needed” (post-test survey).',
+              "User satisfaction (rated 1–5 after interacting)."
+            ]
+          }
+        ],
+        s10Tag: "AI in the design process",
+        aiIntro:
+          "AI was used as support across stages to speed ideation, improve clarity and validate decisions quickly, while maintaining human judgment and UX principles.",
+        aiCards: [
+          {
+            t: "Research & insights",
+            items: ["Analyze the current experience and pinpoint usability issues.", "Define problems, insights and starting hypotheses."]
+          },
+          {
+            t: "Ideation & structure",
+            items: [
+              "Explore layout ideas and content hierarchy.",
+              "Define Home structure and prioritize key elements.",
+              "Refine UX writing."
+            ]
+          },
+          {
+            t: "Prototyping & validation",
+            items: ["Generate visuals and UI building blocks.", "Prototype interactions using Claude (Design mode).", "Simulate early validation scenarios."]
+          }
+        ],
+        aiOutro:
+          "AI acted as a co-creation teammate — enabling faster exploration and iteration — while decisions stayed grounded in user needs and UX best practices.",
+        s11Tag: "Conclusion · prototype",
+        concH: "Conclusion",
+        concBody:
+          "This proposal focuses on improving the home experience by prioritizing key user needs, especially order tracking, and reducing cognitive load through clearer structure and better content hierarchy. By shifting from a promotion-driven layout to a more functional, user-centered approach, the design aims to support faster decision-making and a more intuitive experience.",
+        capV1: "Prototype — no open order scenario",
+        capV2: "Prototype — active order scenario",
+        logoGptLabel: "ChatGPT",
+        logoClaudeLabel: "Claude",
+        logoStitchLabel: "Stitch"
+      };
+
+  const hypCardsHtml = B.hypSupport
+    .map(
+      (hp, idx) =>
+        `<article class="belcorp-hypo-card${idx === 1 ? " belcorp-hypo-card--accent" : ""}">
+        <div class="belcorp-hypo-card__title">${hp.t}</div>
+        <p>${hp.body}</p>
+      </article>`
+    )
+    .join("");
+
+  const insightsHtml = B.insights.map((txt) => `<article class="belcorp-insight-card"><p>${txt}</p></article>`).join("");
+
+  const approachCardsHtml = B.apSteps
+    .map(
+      (st) => `
+    <article class="belcorp-approach-card">
+      <div class="belcorp-approach__icon">${st.icon}</div>
+      <div class="belcorp-approach__h">${st.h}</div>
+      <div class="belcorp-approach__sub">${st.sub}</div>
+      <p class="belcorp-approach__p">${st.d}</p>
+    </article>`
+    )
+    .join("");
+
+  const stairsHtml = B.stairs
+    .map(
+      (row, idx) =>
+        `<div class="belcorp-stair belcorp-stair--${idx + 1}"><span class="belcorp-stair__rule" aria-hidden="true"></span><div class="belcorp-stair__copy"><h3>${row.ti}</h3><p>${row.b}</p></div></div>`
+    )
+    .join("");
+
+  const metricsHtml = B.metrics
+    .map(
+      (m) => `
+    <article class="belcorp-val-card">
+      <h3>${m.ti}</h3>
+      <ul>${m.items.map((x) => `<li>${x}</li>`).join("")}</ul>
+    </article>`
+    )
+    .join("");
+
+  const aiCardsHtml = B.aiCards
+    .map(
+      (c) => `
+    <article class="belcorp-ai-card">
+      <h3>${c.t}</h3>
+      <ul>${c.items.map((x) => `<li>${x}</li>`).join("")}</ul>
+    </article>`
+    )
+    .join("");
+
+  const logosHtml = `
+    <div class="belcorp-ai-logos">
+      <div class="belcorp-ai-logo-item">
+        <img class="belcorp-ai-logo-img" src="${BEL_IMG.aiLogos.chatgpt}" alt="${B.logoGptLabel.replace(/"/g, "&quot;")}" loading="lazy" decoding="async" />
+      </div>
+      <div class="belcorp-ai-logo-item">
+        <img class="belcorp-ai-logo-img belcorp-ai-logo-img--claude" src="${BEL_IMG.aiLogos.claude}" alt="${B.logoClaudeLabel.replace(/"/g, "&quot;")}" loading="lazy" decoding="async" />
+      </div>
+      <div class="belcorp-ai-logo-item">
+        <img class="belcorp-ai-logo-img belcorp-ai-logo-img--stitch" src="${BEL_IMG.aiLogos.stitch}" alt="${B.logoStitchLabel.replace(/"/g, "&quot;")}" loading="lazy" decoding="async" />
+      </div>
+    </div>`;
+
+  return `${modalHeaderHtml(p, t)}
+    <section class="block banco-reveal">
+      <div class="block__tag">[ 01 ] · ${B.s1Tag}</div>
+      <div class="block__body">
+        <div class="banco-panel">
+          <h2 class="banco-h2">${B.chH}</h2>
+          <p class="banco-lead">${B.chBody}</p>
+          <h2 class="banco-h2" style="margin-top:28px">${B.ctxH}</h2>
+          <p class="banco-lead">${B.ctxBody}</p>
+        </div>
+      </div>
+    </section>
+    <section class="block banco-reveal">
+      <div class="block__tag">[ 02 ] · ${B.s2Tag}</div>
+      <div class="block__body">
+        <div class="banco-panel">
+          <h2 class="banco-h2">${B.probH}</h2>
+          <p class="banco-lead">${B.probBody}</p>
+        </div>
+      </div>
+    </section>
+    <section class="block banco-reveal">
+      <div class="block__tag">[ 03 ] · ${B.s3Tag}</div>
+      <div class="block__body">
+        <div class="banco-panel">
+          <h2 class="banco-h2">${B.insH}</h2>
+          <div class="belcorp-insights-grid">${insightsHtml}</div>
+        </div>
+      </div>
+    </section>
+    <section class="block banco-reveal">
+      <div class="block__tag">[ 04 ] · ${B.s4Tag}</div>
+      <div class="block__body">
+        <div class="belcorp-hypo-zone">
+          <p class="belcorp-hypo-main">${B.hypMain}</p>
+          <div class="belcorp-hypo-cards">${hypCardsHtml}</div>
+        </div>
+      </div>
+    </section>
+    <section class="block banco-reveal">
+      <div class="block__tag">[ 05 ] · ${B.s5Tag}</div>
+      <div class="block__body">
+        <div class="belcorp-approach-intro">
+          <h2 class="banco-h2" style="text-align:center">${B.apTitle}</h2>
+          <p class="banco-lead" style="text-align:center">${B.apIntro}</p>
+        </div>
+        <div class="belcorp-approach-grid">${approachCardsHtml}</div>
+      </div>
+    </section>
+    <section class="block banco-reveal">
+      <div class="block__tag">[ 06 ] · ${B.s6Tag}</div>
+      <div class="block__body">
+        <div class="banco-panel">
+          <p class="banco-lead belcorp-stairs-intro">${B.stIntro}</p>
+          <div class="belcorp-stairs">${stairsHtml}</div>
+        </div>
+      </div>
+    </section>
+    <section class="block banco-reveal">
+      <div class="block__tag">[ 07 ] · ${B.s7Tag}</div>
+      <div class="block__body">
+        <figure class="banco-fig">
+          <img src="${BEL_IMG.wireframes}" alt="${B.wfCap.replace(/"/g, "&quot;")}" width="1600" loading="lazy" decoding="async" />
+          <figcaption>${B.wfCap}</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="block banco-reveal">
+      <div class="block__tag">[ 08 ] · ${B.s8Tag}</div>
+      <div class="block__body">
+        <figure class="banco-fig">
+          <img src="${BEL_IMG.mockups}" alt="${B.mkCap.replace(/"/g, "&quot;")}" width="1600" loading="lazy" decoding="async" />
+          <figcaption>${B.mkCap}</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="block banco-reveal">
+      <div class="block__tag">[ 09 ] · ${B.s9Tag}</div>
+      <div class="block__body">
+        <div class="belcorp-validation-zone">
+          <p class="belcorp-val-intro">${B.valIntro}</p>
+          <div class="belcorp-val-stack">${metricsHtml}</div>
+        </div>
+      </div>
+    </section>
+    <section class="block banco-reveal">
+      <div class="block__tag">[ 10 ] · ${B.s10Tag}</div>
+      <div class="block__body">
+        <div class="banco-panel">
+          <p class="belcorp-ai-intro">${B.aiIntro}</p>
+          <div class="belcorp-ai-cards">${aiCardsHtml}</div>
+          <p class="belcorp-ai-outro">${B.aiOutro}</p>
+          ${logosHtml}
+        </div>
+      </div>
+    </section>
+    <section class="block banco-reveal">
+      <div class="block__tag">[ 11 ] · ${B.s11Tag}</div>
+      <div class="block__body">
+        <div class="banco-concl-split">
+          <div class="banco-concl-split__panel banco-panel">
+            <h2 class="banco-concl-h2">${B.concH}</h2>
+            <p class="banco-lead" style="margin-top:14px">${B.concBody}</p>
+          </div>
+          <div class="banco-concl-split__media">
+            <div class="belcorp-proto-stack">
+              <figure class="belcorp-proto-fig">
+                <video class="banco-concl-split__video" controls playsinline preload="metadata" title="${B.capV1.replace(/"/g, "&quot;")}">
+                  <source src="${BEL_VID.sinPedido}" type="video/mp4" />
+                </video>
+                <figcaption>${B.capV1}</figcaption>
+              </figure>
+              <figure class="belcorp-proto-fig">
+                <video class="banco-concl-split__video" controls playsinline preload="metadata" title="${B.capV2.replace(/"/g, "&quot;")}">
+                  <source src="${BEL_VID.conPedido}" type="video/mp4" />
+                </video>
+                <figcaption>${B.capV2}</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="block banco-reveal">
+      <div class="block__tag">[ 12 ] · ${t.outcome}</div>
+      <div class="block__body"><p>${p.outcome}</p></div>
+      <div class="stats">
+        ${p.stats.map(s => `
+          <div class="stat">
+            <div class="stat__num">${s.num}</div>
+            <div class="stat__lbl">${s.lbl}</div>
+          </div>
+        `).join("")}
+      </div>
+    </section>
+    ${modalBehanceSectionHtml(p, t, 13, "banco-reveal")}
+    ${modalFooterHtml(next, t)}`;
+}
+
 let veraScrollIO = null;
+
 function initVeraScrollReveals() {
   const modal = document.getElementById("modal");
   if (!modal) return;
@@ -8286,6 +9267,7 @@ function fillModalForProjectId(id) {
   const modalEl = document.getElementById("modal");
   document.getElementById("modalContent").innerHTML =
     p.id === "vera" ? buildVeraCaseHtml(p, t, next)
+      : p.id === "belcorpHome" ? buildBelcorpCaseHtml(p, t, next)
       : p.id === "brebWhatsapp" ? buildBrebCaseHtml(p, t, next)
       : p.id === "identityBdb" ? buildIdentityCaseHtml(p, t, next)
       : p.id === "wompy" ? buildWompyCaseHtml(p, t, next)
@@ -8298,7 +9280,8 @@ function fillModalForProjectId(id) {
   modalEl.classList.toggle("modal--breb", p.id === "brebWhatsapp");
   modalEl.classList.toggle("modal--identity", p.id === "identityBdb");
   modalEl.classList.toggle("modal--wompy", p.id === "wompy");
-  modalEl.classList.toggle("modal--banco", p.id === "bancolombiaTransfers" || p.id === "nequi");
+  modalEl.classList.toggle("modal--banco", p.id === "bancolombiaTransfers" || p.id === "nequi" || p.id === "belcorpHome");
+  modalEl.classList.toggle("modal--belcorp", p.id === "belcorpHome");
   modalEl.classList.toggle("modal--nequi", p.id === "nequi");
   const nextBtn = document.querySelector(".modal__next");
   if (nextBtn) {
@@ -8306,7 +9289,7 @@ function fillModalForProjectId(id) {
       openModal(e.currentTarget.dataset.next);
     });
   }
-  if (p.id === "vera" || p.id === "brebWhatsapp" || p.id === "identityBdb" || p.id === "wompy" || p.id === "bancolombiaTransfers" || p.id === "nequi") {
+  if (p.id === "vera" || p.id === "belcorpHome" || p.id === "brebWhatsapp" || p.id === "identityBdb" || p.id === "wompy" || p.id === "bancolombiaTransfers" || p.id === "nequi") {
     requestAnimationFrame(() => initVeraScrollReveals());
   }
   return true;
@@ -8329,7 +9312,7 @@ function closeModal() {
   modalEl.classList.remove("modal--identity");
   modalEl.classList.remove("modal--wompy");
   modalEl.classList.remove("modal--banco");
-  modalEl.classList.remove("modal--nequi");
+  modalEl.classList.remove("modal--belcorp");
   modalEl.removeAttribute("data-case-id");
   document.body.classList.remove("modal-open");
   const ambLayer = document.getElementById("modalAmbientParallax");
