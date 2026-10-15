@@ -806,13 +806,10 @@ html.intro-done #pageRoot{visibility:visible!important;pointer-events:auto!impor
     }
 
     video.addEventListener('error', usePosterOnly, { once: true });
-    video.addEventListener('loadeddata', markReady, { once: true });
-    video.addEventListener('canplay', markReady, { once: true });
-
-    if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      usePosterOnly();
-      return;
-    }
+    video.addEventListener('loadeddata', markReady);
+    video.addEventListener('canplay', markReady);
+    video.addEventListener('playing', markReady);
+    if (video.readyState >= 2) markReady();
 
     video.muted = true;
     syncAudioUi(false);
@@ -820,11 +817,12 @@ html.intro-done #pageRoot{visibility:visible!important;pointer-events:auto!impor
     function tryPlay() {
       if (stage && stage.classList.contains('is-poster-only')) return;
       var p = video.play();
-      if (!p || !p.catch) return;
-      p.catch(function () {
-        tries += 1;
-        if (tries < 8) setTimeout(tryPlay, 350);
-      });
+      if (p && p.then) {
+        p.then(function () { markReady(); }).catch(function () {
+          tries += 1;
+          if (tries < 12) setTimeout(tryPlay, 350);
+        });
+      }
     }
     tryPlay();
   }
@@ -837,6 +835,10 @@ html.intro-done #pageRoot{visibility:visible!important;pointer-events:auto!impor
     }
   }
   whenIntroDone(initHeroVideo);
+  window.addEventListener('load', function () {
+    var v = document.getElementById('heroVideo');
+    if (v && !v.classList.contains('ready') && v.readyState >= 2) v.classList.add('ready');
+  });
 })();
 </script>
 <!-- ============ 09 FOOTER ============ -->
