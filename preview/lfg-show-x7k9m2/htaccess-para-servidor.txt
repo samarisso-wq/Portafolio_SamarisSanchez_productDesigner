@@ -1,0 +1,7 @@
+# Renombra este archivo a .htaccess al subir (Apache / cPanel)
+Options -Indexes
+<IfModule mod_headers.c>
+  Header set X-Robots-Tag "noindex, nofollow, noarchive, nosnippet"
+</IfModule>
+
+# Contraseña: usa cPanel → "Directorios protegidos con contraseña" en esta carpeta (recomendado).

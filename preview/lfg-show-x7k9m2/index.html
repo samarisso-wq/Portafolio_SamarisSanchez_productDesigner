@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style id="lfg-intro-lock">html.js:not(.intro-done) #pageRoot{visibility:hidden!important;pointer-events:none!important}html.js:not(.intro-done),html.js:not(.intro-done) body{overflow:hidden!important;background:#000!important}#lfg-entrance{display:block!important}</style>
+<title>The LFG Show | More Than a Show</title><!-- intro v4 — abre Downloads/lfg-html/index.html -->
+<meta name="description" content="Discover The LFG Show. Bold conversations, authentic connections, community, events and experiences beyond the screen.">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="theme-color" content="#080808">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The LFG Show">
+<meta property="og:title" content="The LFG Show | More Than a Show">
+<meta property="og:description" content="Discover The LFG Show. Bold conversations, authentic connections, community, events and experiences beyond the screen.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');window.__LFG_CONFIG_PREVIEW__={enabled:false,password:''};</script>
+<style>
+/* =========================================================================
+   THE LFG SHOW — single-file landing page
+   ========================================================================= */
+:root{
+  /* LFG brand colors */
+  --lfg-green-primary:#8EDB50;
+  --lfg-green-dark:#367C21;
+  --lfg-green-neon:#A5F66B;
+  --lfg-black:#080808;
+  --lfg-white:#FFFFFF;
+
+  --color-primary:var(--lfg-white);
+  --color-secondary:#a3a3a3;
+  --color-accent:var(--lfg-green-primary);
+  --color-accent-bright:var(--lfg-green-neon);
+  --color-background:var(--lfg-black);
+  --color-surface:#151515;
+  --color-text:var(--lfg-white);
+  --color-text-muted:#a3a3a3;
+
+  --font-heading:'Anton',sans-serif;
+  --font-body:'Inter',system-ui,sans-serif;
+  --font-display:var(--font-heading);
+  --maxw:1800px;
+  --gutter:clamp(20px,3vw,40px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--color-background);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--color-background);color:var(--color-text);font-family:var(--font-body);line-height:1.5;overflow-x:hidden;-webkit-font-smoothing:antialiased;
+  -webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+input,textarea,select{-webkit-user-select:text;user-select:text}
+img,video{display:block;max-width:100%;-webkit-user-drag:none}
+a{color:inherit;text-decoration:none}
+ul{list-style:none;margin:0;padding:0}
+h1,h2,h3,p{margin:0}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;padding:0}
+section[id]{scroll-margin-top:4rem}
+:focus-visible{outline:2px solid var(--color-accent);outline-offset:3px}
+::selection{background:var(--color-accent-bright);color:var(--lfg-black)}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip{position:absolute;left:16px;top:-60px;z-index:100;background:var(--color-accent);color:#000;padding:10px 16px;font:600 14px var(--font-display)}
+.skip:focus{top:16px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding-inline:var(--gutter)}
+
+/* ---- Typography ---- */
+.display{font-family:var(--font-heading);font-weight:400;text-transform:uppercase;letter-spacing:-.02em;line-height:.95}
+.hero-title{font-family:var(--font-heading);font-size:clamp(64px,10vw,150px);font-weight:400;text-transform:uppercase;line-height:.95;letter-spacing:-.02em}
+.d-xl{font-size:clamp(64px,10vw,150px);line-height:.95}
+.d-lg{font-size:clamp(2.5rem,8vw,7rem)}
+.d-md{font-size:clamp(2.25rem,4.6vw,4.75rem)}
+.line{display:block;overflow:hidden;padding-bottom:.08em}
+.line-in{display:block;will-change:transform}
+.eyebrow{display:flex;align-items:center;gap:12px;font:600 clamp(.75rem,1vw,.875rem)/1 var(--font-display);letter-spacing:.28em;text-transform:uppercase;color:var(--color-accent)}
+.eyebrow::before{content:"";width:32px;height:1px;background:var(--color-accent)}
+.lead{font-size:clamp(1rem,1.4vw,1.25rem);line-height:1.65;color:rgba(255,255,255,.75)}
+.muted{color:var(--color-text-muted)}
+
+/* ---- Pre-animation states (only with JS + motion allowed) ---- */
+@media (prefers-reduced-motion:no-preference){
+  .js .line-in{transform:translateY(110%)}
+  .js .rv{opacity:0;transform:translateY(32px)}
+  .js .rf{opacity:0}
+  .js .clip{clip-path:inset(100% 0 0 0)}
+}
+@media (prefers-reduced-motion:reduce){
+  .js .line-in{transform:none}
+  .js .rv{opacity:1;transform:none}
+  .js .rf{opacity:1}
+  .js .clip{clip-path:inset(0)}
+}
+
+/* ---- Buttons ---- */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:16px 28px;font:600 clamp(.75rem,1vw,.875rem)/1 var(--font-display);letter-spacing:.18em;text-transform:uppercase;transition:background-color .3s,color .3s,border-color .3s;white-space:nowrap;will-change:transform}
+.btn .arr{display:inline-block;transition:transform .3s}
+.btn:hover .arr{transform:translate(4px,-4px)}
+.btn-solid{background:var(--color-accent);color:#000}
+.btn-solid:hover{background:#fff}
+.btn-outline{border:1px solid rgba(255,255,255,.4);color:#fff}
+.btn-outline:hover{border-color:var(--color-accent);color:var(--color-accent)}
+.btn-sm{padding:12px 20px}
+.btn[aria-disabled="true"]{opacity:.55;cursor:not-allowed}
+.btn:disabled{opacity:.6;cursor:not-allowed}
+
+/* ---- Media placeholders (gradient shows if the file is missing) ---- */
+.media{position:relative;overflow:hidden;background:radial-gradient(120% 90% at 20% 10%,#2a2a2a 0%,#101010 55%,#070707 100%)}
+.media.t-b{background:radial-gradient(110% 90% at 85% 15%,color-mix(in srgb,var(--lfg-green-dark) 55%,#0f1008) 0%,#0f1008 55%,#070707 100%)}
+.media.t-c{background:radial-gradient(120% 100% at 50% 100%,#2b2b2b 0%,#121212 50%,#070707 100%)}
+.media.t-d{background:radial-gradient(100% 80% at 10% 90%,#202020 0%,#0d0d0d 60%,#060606 100%)}
+.media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:filter .55s ease,transform .6s ease-out}
+.media img:not(.about-logo-fallback){filter:grayscale(1)}
+@media (hover:none){.media img:not(.about-logo-fallback){filter:grayscale(0)}}
+.media.about-brand img:not(.about-logo-fallback){filter:none}
+.fill{position:absolute;inset:0}
+.hero-bg > img{filter:grayscale(1);transition:filter .55s ease}
+.hero:hover .hero-bg > img,.hero:focus-within .hero-bg > img{filter:grayscale(0)}
+.hero-bg.is-poster-only .photo{display:none}
+
+/* ---- Parallax ---- */
+.parallax{position:relative;overflow:hidden}
+.parallax-in{position:absolute;left:0;right:0;top:0;bottom:0;will-change:transform}
+
+/* ---- Header ---- */
+.header{position:fixed;inset:0 0 auto 0;z-index:50;border-bottom:1px solid transparent;transition:background-color .5s,border-color .5s,backdrop-filter .5s}
+.header.is-solid{background:rgba(0,0,0,.7);border-color:rgba(255,255,255,.1);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:block;height:28px;width:auto}
+.nav-links{display:none;align-items:center;gap:36px}
+.nav-links a{font:600 .75rem var(--font-display);letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.8);transition:color .3s}
+.nav-links a:hover{color:var(--color-accent)}
+.nav-cta{display:none}
+.burger{position:relative;width:44px;height:44px}
+.burger span{position:absolute;left:10px;right:10px;height:2px;background:#fff;transition:all .3s}
+.burger span:nth-child(1){top:40%}.burger span:nth-child(2){top:60%}
+.burger[aria-expanded="true"] span:nth-child(1){top:50%;transform:translateY(-50%) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){top:50%;transform:translateY(-50%) rotate(-45deg)}
+.menu{position:fixed;inset:0;z-index:40;display:flex;flex-direction:column;justify-content:center;padding:64px var(--gutter) 0;background:#000;clip-path:circle(0% at 100% 0%);visibility:hidden;transition:clip-path .7s cubic-bezier(.76,0,.24,1),visibility 0s .7s}
+.menu.is-open{clip-path:circle(150% at 100% 0%);visibility:visible;transition:clip-path .7s cubic-bezier(.76,0,.24,1),visibility 0s}
+.menu a.big{display:block;padding:4px 0;font:400 clamp(3rem,14vw,4.5rem)/1.05 var(--font-heading);letter-spacing:-.02em;text-transform:uppercase;transition:color .3s,opacity .5s,transform .5s;opacity:0;transform:translateY(40px)}
+.menu.is-open a.big{opacity:1;transform:none}
+.menu.is-open li:nth-child(1) a.big{transition-delay:.25s,.25s,.25s}
+.menu.is-open li:nth-child(2) a.big{transition-delay:.32s,.32s,.32s}
+.menu.is-open li:nth-child(3) a.big{transition-delay:.39s,.39s,.39s}
+.menu.is-open li:nth-child(4) a.big{transition-delay:.46s,.46s,.46s}
+.menu.is-open li:nth-child(5) a.big{transition-delay:.53s,.53s,.53s}
+.menu a.big:hover{color:var(--color-accent)}
+.menu .btn{margin-top:40px;align-self:flex-start}
+@media(min-width:768px){.nav{height:80px}.logo{height:32px}}
+@media(min-width:1024px){.nav-links{display:flex}.nav-cta{display:inline-flex}.burger{display:none}.menu{display:none}}
+
+/* ---- Hero: video a pantalla completa ---- */
+.hero{position:relative;display:flex;align-items:flex-end;height:100svh;min-height:680px;overflow:hidden;background:var(--lfg-black)}
+.hero-bg{position:absolute;inset:0;z-index:0;background:radial-gradient(90% 70% at 70% 20%,#232323 0%,#0c0c0c 55%,#060606 100%)}
+.hero-bg img,.hero-bg .photo{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:center;user-select:none;-webkit-user-drag:none;pointer-events:none}
+.hero-bg img{z-index:0}
+.hero-bg .photo{z-index:1;opacity:0;transition:opacity .8s}
+.hero-bg .photo.ready{opacity:1}
+.hero-shade{position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(to top,#000 0%,rgba(0,0,0,.55) 45%,rgba(0,0,0,.35) 100%)}
+.hero-audio{position:absolute;right:var(--gutter);top:calc(64px + 12px);z-index:3;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:rgba(0,0,0,.55);color:#fff;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);cursor:pointer;transition:border-color .2s,background .2s;-webkit-tap-highlight-color:transparent}
+.hero-audio:hover{border-color:var(--color-accent);color:var(--color-accent-bright)}
+.hero-audio svg{width:20px;height:20px;display:block}
+.hero-audio[aria-pressed="false"] .ico-sound-on{display:none}
+.hero-audio[aria-pressed="true"] .ico-sound-off{display:none}
+.hero-body{position:relative;z-index:3;width:100%;padding-bottom:clamp(96px,12vh,112px)}
+.hero-2{margin-top:24px;font:600 clamp(1.125rem,2.6vw,2.25rem)/1.15 var(--font-body);letter-spacing:.06em;text-transform:uppercase;color:var(--color-accent-bright)}
+.hero-copy{margin-top:20px;max-width:36rem;font-size:clamp(1rem,1.4vw,1.125rem);line-height:1.65;color:rgba(255,255,255,.8)}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:16px;margin-top:36px}
+@media (min-width:768px){.hero-audio{top:calc(80px + 12px)}}
+.cue{position:absolute;left:50%;bottom:24px;z-index:2;display:none;flex-direction:column;align-items:center;gap:12px;transform:translateX(-50%)}
+.cue span:first-child{font:600 10px var(--font-display);letter-spacing:.35em;text-transform:uppercase;color:rgba(255,255,255,.7)}
+.cue i{position:relative;display:block;width:1px;height:48px;overflow:hidden;background:rgba(255,255,255,.2)}
+.cue i::after{content:"";position:absolute;inset:0;background:var(--color-accent);animation:cue 1.8s cubic-bezier(.65,0,.35,1) infinite}
+@keyframes cue{0%{transform:translateY(-100%)}100%{transform:translateY(100%)}}
+@media(min-width:768px){.cue{display:flex}}
+
+/* ---- Sections ---- */
+.sec{padding:72px 0}
+@media(min-width:768px){.sec{padding:112px 0}}
+.bg-surface{background:var(--color-surface)}
+.scroll-sec{position:relative;isolation:isolate}
+.sec-parallax-bg{position:absolute;inset:-20% 0;pointer-events:none;z-index:0;overflow:hidden}
+.sec-parallax-bg .orb{position:absolute;border-radius:50%;filter:blur(72px);will-change:transform}
+.sec-parallax-bg .orb--a{width:min(58vw,560px);height:min(58vw,560px);right:-14%;top:0;background:color-mix(in srgb,var(--lfg-green-primary) 70%,transparent);opacity:.22}
+.sec-parallax-bg .orb--b{width:min(42vw,380px);height:min(42vw,380px);left:-10%;bottom:8%;background:color-mix(in srgb,var(--lfg-green-neon) 55%,transparent);opacity:.14}
+.scroll-sec>.wrap,.scroll-sec>.about-grid{position:relative;z-index:1}
+.sec-head{display:grid;gap:20px;margin-bottom:40px}
+.sec-head .eyebrow{margin-bottom:16px}
+.sec-head .lead{max-width:28rem}
+@media(min-width:768px){.sec-head{margin-bottom:48px;gap:24px}}
+@media(min-width:1024px){.sec-head{grid-template-columns:2fr 1fr;align-items:start;gap:32px 40px}.sec-head .lead{justify-self:end;text-align:right}}
+
+/* ---- Explore ---- */
+.cards{display:flex;flex-direction:column;gap:16px}
+.card{position:relative;display:flex;flex-direction:column;justify-content:space-between;flex:1;min-height:440px;padding:24px;overflow:hidden;border:1px solid rgba(255,255,255,.1);transition:flex-grow .5s ease-out,border-color .5s}
+.card:hover,.card:focus-visible{border-color:var(--color-accent)}
+.card .media{position:absolute;inset:0;z-index:0}
+.card:hover .media img,.card:focus-visible .media img{filter:grayscale(0);transform:scale(1.06)}
+.card .shade{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(to top,#000,rgba(0,0,0,.5) 50%,rgba(0,0,0,.25));opacity:.8;transition:opacity .5s}
+.card:hover .shade{opacity:1}
+.card .tint{position:absolute;inset:0;z-index:1;pointer-events:none;background:transparent;transition:background-color .5s}
+.card:hover .tint{background:color-mix(in srgb,var(--color-accent) 10%,transparent)}
+.card-top{position:relative;z-index:3;font:600 .75rem var(--font-display);letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.8)}
+.card-top b{color:var(--color-accent);font-weight:600}
+.card-bot{position:relative;z-index:3}
+.card h3{font:400 clamp(1.875rem,3vw,3rem)/.95 var(--font-heading);letter-spacing:-.02em;text-transform:uppercase;transition:transform .5s ease-out}
+.card:hover h3{transform:translateY(-8px)}
+.card p{margin-top:16px;max-width:24rem;font-size:.95rem;line-height:1.6;color:rgba(255,255,255,.75)}
+.card .cta{margin-top:24px;display:inline-flex;gap:12px;font:600 .75rem var(--font-display);letter-spacing:.18em;text-transform:uppercase;color:var(--color-accent)}
+.card .cta .arr{display:inline-block;transition:transform .5s}
+.card:hover .cta .arr{transform:translate(4px,-4px)}
+@media(min-width:768px){.card{min-height:540px;padding:32px}}
+@media(min-width:1024px){.cards{flex-direction:row;align-items:stretch}.card{min-height:420px;max-height:min(520px,58vh)}.card:hover{flex-grow:1.35}}
+
+/* ---- About ---- */
+.about{overflow:hidden}
+.about-grid{display:grid;gap:48px}
+.about-img{position:relative}
+.about-main{aspect-ratio:4/5;width:100%}
+.media.about-brand{display:flex;align-items:center;justify-content:center;background:#000}
+.media.about-brand img{position:static;inset:auto;width:auto;height:auto;max-width:min(76%,300px);max-height:76%;object-fit:contain;flex-shrink:0}
+.media.about-brand img.about-logo-fallback{max-width:min(88%,360px);filter:brightness(0) invert(1)}
+.about-sub{display:none;position:absolute;right:0;bottom:-40px;width:42%;border:8px solid var(--color-surface)}
+.about-sub .parallax{aspect-ratio:1/1}
+.about-img:hover .about-sub .media img{filter:grayscale(0)}
+.about-copy .eyebrow{margin-bottom:24px}
+.about-copy .lead{margin-top:20px}
+.about-copy .lead:first-of-type{margin-top:32px}
+.closing{margin-top:40px;padding-left:20px;border-left:2px solid var(--color-accent);font:400 clamp(1.25rem,2vw,1.5rem)/1.15 var(--font-heading);letter-spacing:-.02em;text-transform:uppercase}
+.about-copy .btn{margin-top:40px}
+@media(min-width:640px){.about-sub{display:block}}
+@media(min-width:1024px){.about-grid{grid-template-columns:repeat(12,1fr);gap:40px;align-items:center}.about-img{grid-column:1/7}.about-copy{grid-column:8/13}}
+
+/* ---- Featured ---- */
+.feat-head{margin-bottom:40px}
+.feat-head .eyebrow{margin-bottom:24px}
+.feat-head p.note{margin-top:24px;font-size:.875rem}
+.ep{position:relative;display:block;overflow:hidden;border:1px solid rgba(255,255,255,.1);transition:border-color .5s}
+.ep:hover{border-color:var(--color-accent)}
+.ep .media{position:absolute;inset:0;z-index:0}
+.ep:hover .media img,.ep:focus-visible .media img{filter:grayscale(0);transform:scale(1.05)}
+.ep .shade{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(to top,rgba(0,0,0,.9),rgba(0,0,0,.3) 60%,rgba(0,0,0,.3))}
+.ep-main{aspect-ratio:4/5}
+.play-xl{position:absolute;left:50%;top:50%;z-index:3;display:flex;align-items:center;justify-content:center;width:80px;height:80px;border-radius:50%;background:var(--color-accent);color:#000;transform:translate(-50%,-50%);transition:transform .5s}
+.ep:hover .play-xl{transform:translate(-50%,-50%) scale(1.1)}
+.play-xl svg{width:32px;height:32px;margin-left:4px}
+.ep-main .info{position:absolute;inset:auto 0 0 0;z-index:3;display:flex;flex-direction:column;gap:16px;padding:24px;pointer-events:none}
+.ep-main .info .watch{pointer-events:auto}
+.tag{font:600 .75rem var(--font-display);letter-spacing:.28em;text-transform:uppercase;color:var(--color-accent)}
+.ep-main h3{margin-top:12px;max-width:48rem;font:400 clamp(1.5rem,3.4vw,3rem)/.95 var(--font-heading);letter-spacing:-.02em;text-transform:uppercase}
+.watch{display:inline-flex;gap:12px;font:600 .75rem var(--font-display);letter-spacing:.18em;text-transform:uppercase}
+.watch .arr{display:inline-block;transition:transform .5s}
+.ep:hover .watch .arr{transform:translate(4px,-4px)}
+.ep-grid{display:grid;gap:16px;margin-top:16px}
+.ep-s{aspect-ratio:16/9}
+.ep-s .play-s{position:absolute;right:16px;top:16px;z-index:3;display:flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.15);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);transition:background-color .3s,color .3s}
+.ep-s:hover .play-s{background:var(--color-accent);color:#000}
+.play-s svg{width:20px;height:20px;margin-left:2px}
+.ep-s .info{position:absolute;inset:auto 0 0 0;z-index:3;padding:20px;pointer-events:none}
+.ep-s h3{margin-top:8px;font:400 clamp(1.125rem,1.6vw,1.25rem)/1.1 var(--font-heading);letter-spacing:-.02em;text-transform:uppercase}
+.ep-s .tag{font-size:.6875rem;letter-spacing:.24em}
+@media(min-width:640px){.ep-main{aspect-ratio:16/9}.play-xl{width:112px;height:112px}.play-xl svg{width:44px;height:44px}.ep-main .info{flex-direction:row;align-items:flex-end;justify-content:space-between;padding:40px}.ep-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.ep-grid{grid-template-columns:repeat(3,1fr)}}
+
+/* ---- Community ---- */
+.community{position:relative;display:flex;align-items:center;min-height:min(100svh,820px);padding:96px 0;overflow:hidden;background:#000}
+@media(min-width:768px){.community{padding:112px 0}}
+.community .parallax{position:absolute;inset:0}
+.community .parallax .media{position:absolute;inset:0;z-index:0}
+.community:hover .parallax .media img{filter:grayscale(0)}
+.community .dim{position:absolute;inset:0;z-index:1;background:rgba(0,0,0,.6)}
+.community .fade{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(to bottom,var(--color-background),transparent 30%,transparent 70%,var(--color-background))}
+.community .glow{position:absolute;left:-10%;top:50%;z-index:1;width:min(60vw,720px);height:min(60vw,720px);border-radius:50%;background:color-mix(in srgb,var(--color-accent) 10%,transparent);filter:blur(64px);transform:translateY(-50%);pointer-events:none}
+.community .wrap{position:relative;z-index:3;width:100%}
+.community .lead{max-width:36rem;margin-top:32px;color:rgba(255,255,255,.8)}
+.community .btn{margin-top:40px}
+
+/* ---- Events ---- */
+.ev-grid{display:grid;gap:16px}
+.ev{position:relative;display:block;aspect-ratio:4/3;overflow:hidden;border:1px solid rgba(255,255,255,.1);transition:border-color .5s}
+.ev:hover{border-color:var(--color-accent)}
+.ev .media{position:absolute;inset:0;z-index:0}
+.ev:hover .media img,.ev:focus-visible .media img{filter:grayscale(0);transform:scale(1.06)}
+.ev .shade{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(to top,rgba(0,0,0,.9),rgba(0,0,0,.2) 60%,rgba(0,0,0,.2));transition:opacity .5s}
+.ev .info{position:absolute;inset:auto 0 0 0;z-index:3;padding:24px;pointer-events:none}
+.ev .tag{font-size:.6875rem}
+.ev h3{margin-top:8px;font:400 clamp(1.5rem,2.4vw,1.875rem)/.95 var(--font-heading);letter-spacing:-.02em;text-transform:uppercase;transition:transform .5s ease-out}
+.ev:hover h3{transform:translateY(-8px)}
+.ev p{max-width:28rem;margin-top:12px;font-size:.875rem;line-height:1.6;color:rgba(255,255,255,.75);opacity:.9;transform:translateY(8px);transition:opacity .5s,transform .5s}
+.ev:hover p{opacity:1;transform:none}
+.ev-grid>li{display:block}
+.ev-lg{aspect-ratio:4/5}
+.ev-lg h3{font-size:clamp(1.875rem,4vw,3rem)}
+@media(min-width:768px){.ev-grid{grid-template-columns:repeat(2,1fr)}.ev-lg-li{grid-column:1/-1}.ev-lg{aspect-ratio:16/10}.ev .info{padding:32px}.ev p{opacity:0}}
+@media(min-width:1024px){.ev-grid{grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,minmax(0,1fr))}.ev-lg-li{grid-column:1/3;grid-row:1/3}.ev-lg{height:100%;aspect-ratio:auto;min-height:0;max-height:520px}}
+
+/* ---- Partnerships ---- */
+.partners{position:relative;overflow:hidden;padding:80px 0}
+@media(min-width:768px){.partners{padding:112px 0}}
+.partners .bgm{position:absolute;inset:0;pointer-events:none}
+.blob{position:absolute;border-radius:50%;filter:blur(64px);animation:drift 18s ease-in-out infinite}
+.blob.a{right:-15%;top:5%;width:min(70vw,900px);height:min(70vw,900px);background:color-mix(in srgb,var(--color-accent) 9%,transparent)}
+.blob.b{left:-20%;bottom:-10%;width:min(50vw,640px);height:min(50vw,640px);background:rgba(255,255,255,.04);animation-delay:-9s}
+@keyframes drift{0%,100%{transform:translate3d(-6%,-4%,0) scale(1)}50%{transform:translate3d(6%,5%,0) scale(1.15)}}
+.partners .wrap{position:relative}
+.partners .eyebrow{margin-bottom:32px}
+.partners .lead{max-width:36rem;margin-top:40px}
+.partners .btns{display:flex;flex-wrap:wrap;gap:16px;margin-top:40px}
+
+/* ---- Contact ---- */
+.contact-grid{display:grid;gap:64px}
+.contact-grid .eyebrow{margin-bottom:24px}
+.contact-grid .lead{max-width:28rem;margin-top:32px}
+@media(min-width:1024px){.contact-grid{grid-template-columns:repeat(12,1fr)}.c-left{grid-column:1/7}.c-right{grid-column:8/13}}
+.form{display:grid;gap:32px}
+.f label{display:block;font:600 .75rem var(--font-display);letter-spacing:.24em;text-transform:uppercase;color:var(--color-text-muted)}
+.f input,.f select,.f textarea{width:100%;padding:12px 0;font:inherit;font-size:1rem;color:#fff;background:transparent;border:0;border-bottom:1px solid rgba(255,255,255,.25);border-radius:0;transition:border-color .3s}
+.f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--color-accent)}
+.f [aria-invalid="true"]{border-color:#f87171}
+.f textarea{resize:none}
+.f .sel{position:relative}
+.f select{appearance:none;-webkit-appearance:none;padding-right:32px}
+.f select option{background:var(--color-surface);color:#fff}
+.f .sel svg{position:absolute;right:0;top:50%;width:20px;height:20px;transform:translateY(-50%);color:var(--color-accent);pointer-events:none}
+.err{margin-top:8px;font-size:.875rem;color:#fca5a5}
+.hp{position:absolute;left:-9999px;width:0;height:0;overflow:hidden}
+.alert{padding:16px;border:1px solid rgba(248,113,113,.6);font-size:.875rem;color:#fecaca}
+.ok{padding:32px;border:1px solid var(--color-accent)}
+.ok h3{font:400 clamp(1.75rem,3vw,2rem)/1.05 var(--font-heading);letter-spacing:-.02em;text-transform:uppercase}
+.ok p{margin-top:16px;color:rgba(255,255,255,.75)}
+.ok button{margin-top:24px;font:600 .75rem var(--font-display);letter-spacing:.18em;text-transform:uppercase;color:var(--color-accent);text-decoration:underline;text-underline-offset:4px}
+[hidden]{display:none!important}
+
+/* ---- Footer ---- */
+.footer{position:relative;overflow:hidden;padding-top:80px;border-top:1px solid rgba(255,255,255,.1)}
+.foot-grid{display:grid;gap:48px}
+.foot-grid h4{margin:0 0 20px;font:600 .75rem var(--font-display);letter-spacing:.28em;text-transform:uppercase;color:var(--color-text-muted)}
+.foot-nav{display:grid;grid-template-columns:repeat(2,1fr);gap:12px 24px;max-width:28rem}
+.foot-nav a,.foot-soc a,.foot-soc span{font:600 clamp(1.125rem,2vw,1.5rem) var(--font-display);text-transform:uppercase;transition:color .3s}
+.foot-nav a:hover,.foot-soc a:hover{color:var(--color-accent)}
+.foot-soc{display:flex;flex-wrap:wrap;gap:12px 32px}
+.foot-soc span{color:rgba(255,255,255,.35)}
+.foot-meta{display:flex;flex-direction:column;gap:12px;margin-top:64px;font-size:.875rem;color:var(--color-text-muted)}
+.foot-big{margin:40px 0 0;padding-bottom:.08em;text-align:center;white-space:nowrap;font:400 11.5vw/.8 var(--font-heading);letter-spacing:-.02em;text-transform:uppercase;color:rgba(255,255,255,.9)}
+@media(min-width:768px){.foot-grid{grid-template-columns:1fr 1fr}.foot-meta{flex-direction:row;justify-content:space-between}.footer{padding-top:112px}}
+
+/* ---- Disabled "coming soon" links ---- */
+[data-href-key].is-off{cursor:not-allowed}
+.btn[data-href-key].is-off{opacity:.55}
+
+/* ---- Reduced motion ---- */
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  html.intro-done *,html.intro-done *::before,html.intro-done *::after{transition-duration:.01ms!important;animation:none!important}
+  html.js:not(.intro-done) #lfg-entrance,#lfg-entrance *{animation-duration:2.9s!important}
+}
+@media print{body{display:none!important}}
+
+/* ---- Entrance (CSS backup + JS) ---- */
+@keyframes lfg-burst-in{0%{opacity:1;transform:translate(-50%,-50%) scale(0)}55%{opacity:1;transform:translate(-50%,-50%) scale(28)}100%{opacity:0;transform:translate(-50%,-50%) scale(32)}}
+@keyframes lfg-ring-in{0%,8%{opacity:0;transform:translate(-50%,-50%) scale(.15)}25%{opacity:1}70%{opacity:.85;transform:translate(-50%,-50%) scale(3.2)}100%{opacity:0}}
+@keyframes lfg-word-in{0%,10%{opacity:0;transform:translate(-50%,-58%) scale(.5)}28%{opacity:1;transform:translate(-50%,-58%) scale(1)}68%{opacity:1}100%{opacity:0}}
+@keyframes lfg-sub-in{0%,18%{opacity:0}32%{opacity:1}72%{opacity:1}100%{opacity:0}}
+@keyframes lfg-scan-spin{to{transform:rotate(360deg)}}
+html.js:not(.intro-done) #lfg-burst{animation:lfg-burst-in 2.9s ease-out forwards}
+html.js:not(.intro-done) #lfg-ring{animation:lfg-ring-in 2.9s ease-out forwards}
+html.js:not(.intro-done) #lfg-word{animation:lfg-word-in 2.9s ease-out forwards}
+html.js:not(.intro-done) #lfg-sub{animation:lfg-sub-in 2.9s ease-out forwards}
+html.js:not(.intro-done) #lfg-scan{animation:lfg-scan-spin 8s linear infinite}
+html.intro-done #lfg-entrance{display:none!important}
+html.intro-done #pageRoot{visibility:visible!important;pointer-events:auto!important}
+</style>
+</head>
+<body style="margin:0;background:#000">
+<div id="lfg-preview-gate" hidden style="position:fixed;inset:0;z-index:2147483646;display:flex;align-items:center;justify-content:center;padding:24px;background:#000">
+  <form id="lfg-preview-form" style="width:min(100%,380px);padding:32px;border:1px solid rgba(142,219,80,.35);background:#0a0a0a">
+    <p style="margin:0 0 8px;font:600 .7rem Anton,Impact,sans-serif;letter-spacing:.28em;text-transform:uppercase;color:#8EDB50">Private preview</p>
+    <h2 style="margin:0 0 20px;font:400 1.75rem/1 Anton,Impact,sans-serif;text-transform:uppercase;color:#fff">The LFG Show</h2>
+    <label for="lfg-preview-pass" style="display:block;margin-bottom:8px;font:600 .65rem Inter,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#a3a3a3">Access code</label>
+    <input id="lfg-preview-pass" type="password" autocomplete="current-password" required style="width:100%;padding:12px 14px;font:1rem Inter,sans-serif;color:#fff;background:#151515;border:1px solid rgba(255,255,255,.2);border-radius:0">
+    <p id="lfg-preview-err" hidden style="margin:12px 0 0;font-size:.875rem;color:#fca5a5">Incorrect code.</p>
+    <button type="submit" style="margin-top:20px;width:100%;padding:14px;font:600 .75rem Anton,sans-serif;letter-spacing:.18em;text-transform:uppercase;background:#8EDB50;color:#000;border:0;cursor:pointer">Enter</button>
+  </form>
+</div>
+<script>
+(function () {
+  var cfg = window.__LFG_CONFIG_PREVIEW__;
+  if (!cfg || !cfg.enabled || !cfg.password) return;
+  var KEY = 'lfg-preview-ok';
+  if (sessionStorage.getItem(KEY) === '1') return;
+  var gate = document.getElementById('lfg-preview-gate');
+  var form = document.getElementById('lfg-preview-form');
+  var input = document.getElementById('lfg-preview-pass');
+  var err = document.getElementById('lfg-preview-err');
+  if (!gate || !form) return;
+  gate.hidden = false;
+  document.documentElement.classList.add('lfg-preview-locked');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (input.value === cfg.password) {
+      sessionStorage.setItem(KEY, '1');
+      gate.remove();
+      document.documentElement.classList.remove('lfg-preview-locked');
+      if (typeof window.__LFG_restartIntro === 'function') window.__LFG_restartIntro();
+      return;
+    }
+    err.hidden = false;
+    input.focus();
+  });
+  input.focus();
+})();
+</script>
+<div id="lfg-entrance" role="presentation" aria-hidden="true" style="position:fixed;inset:0;z-index:2147483647;margin:0;padding:0;overflow:hidden;background:#000;pointer-events:auto">
+  <div id="lfg-scan" aria-hidden="true" style="position:absolute;left:-40%;top:-40%;width:180%;height:180%;opacity:.28;background:conic-gradient(from 0deg,transparent 0deg,rgba(142,219,80,.55) 36deg,transparent 72deg);transform:rotate(0deg)"></div>
+  <div id="lfg-ring" aria-hidden="true" style="position:absolute;left:50%;top:50%;width:min(32vmin,280px);height:min(32vmin,280px);margin:0;border-radius:50%;border:2px solid rgba(142,219,80,.65);transform:translate(-50%,-50%) scale(.15);opacity:0;box-sizing:border-box"></div>
+  <div id="lfg-burst" aria-hidden="true" style="position:absolute;left:50%;top:50%;width:min(26vmin,220px);height:min(26vmin,220px);margin:0;border-radius:50%;transform:translate(-50%,-50%) scale(0);opacity:0;background:radial-gradient(circle at 32% 32%,#c8f586 0%,#8EDB50 38%,#367C21 68%,transparent 76%);box-shadow:0 0 90px rgba(142,219,80,.9)"></div>
+  <p id="lfg-word" style="position:absolute;left:50%;top:50%;margin:0;transform:translate(-50%,-58%) scale(.5);opacity:0;font:400 clamp(3.25rem,17vw,9rem)/.9 Anton,Impact,sans-serif;letter-spacing:.05em;text-transform:uppercase;color:#fff;text-shadow:0 0 50px rgba(142,219,80,.95)">LFG</p>
+  <p id="lfg-sub" style="position:absolute;left:50%;top:50%;margin:0;transform:translate(-50%,calc(-58% + clamp(2.8rem,10vw,5rem)));opacity:0;font:600 clamp(.62rem,2vw,.82rem)/1 Inter,system-ui,sans-serif;letter-spacing:.38em;text-transform:uppercase;color:#8EDB50">The Show</p>
+</div>
+<script>
+(function () {
+  'use strict';
+  var root = document.documentElement;
+  var gate = document.getElementById('lfg-entrance');
+  var burst = document.getElementById('lfg-burst');
+  var ring = document.getElementById('lfg-ring');
+  var word = document.getElementById('lfg-word');
+  var sub = document.getElementById('lfg-sub');
+  var scan = document.getElementById('lfg-scan');
+  var closed = false;
+  var DUR = 2900;
+
+  function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
+  function easeInOut(t) { return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; }
+
+  function runIntro() {
+  closed = false;
+  if (gate) gate.style.display = '';
+  root.classList.remove('intro-done');
+  window.__LFG_INTRO_FINISHED = false;
+
+  function closeEntrance() {
+    if (closed) return;
+    closed = true;
+    window.__LFG_INTRO_FINISHED = true;
+    root.classList.add('intro-done');
+    document.body.style.overflow = '';
+    var page = document.getElementById('pageRoot');
+    if (page) {
+      page.style.transform = '';
+      page.style.opacity = '';
+      page.style.visibility = '';
+    }
+    if (gate) gate.style.display = 'none';
+    var lock = document.getElementById('lfg-intro-lock');
+    if (lock && lock.parentNode) lock.parentNode.removeChild(lock);
+    window.dispatchEvent(new Event('lfg:intro-done'));
+  }
+  window.__LFG_finishIntroEarly = closeEntrance;
+
+  if (!gate || /[?&]nointro=1/i.test(String(location.search || ''))) {
+    closeEntrance();
+    return;
+  }
+
+  document.body.style.overflow = 'hidden';
+  if (burst) {
+    burst.style.opacity = '1';
+    burst.style.transform = 'translate(-50%,-50%) scale(1.5)';
+  }
+
+  var t0 = performance.now();
+  function frame(now) {
+    var t = Math.min(1, (now - t0) / DUR);
+    var page = document.getElementById('pageRoot');
+
+    if (scan) scan.style.transform = 'rotate(' + (now / 12) + 'deg)';
+
+    var tb = Math.min(1, t / 0.42);
+    var eb = easeOut(tb);
+    if (burst) {
+      burst.style.animation = 'none';
+      burst.style.opacity = String(tb < 0.08 ? tb / 0.08 : Math.max(0, 1 - Math.max(0, t - 0.48) / 0.18));
+      burst.style.transform = 'translate(-50%,-50%) scale(' + (eb * 28) + ')';
+    }
+    if (ring) {
+      ring.style.animation = 'none';
+      var tr = Math.min(1, Math.max(0, (t - 0.06) / 0.5));
+      ring.style.opacity = String(tr < 0.15 ? tr / 0.15 : Math.max(0, 1 - Math.max(0, tr - 0.65) / 0.35));
+      ring.style.transform = 'translate(-50%,-50%) scale(' + (0.15 + easeOut(tr) * 3.2) + ')';
+    }
+    var tw = Math.min(1, Math.max(0, (t - 0.12) / 0.35));
+    if (word) {
+      word.style.animation = 'none';
+      var aw = easeOut(tw);
+      word.style.opacity = String(t < 0.68 ? aw : Math.max(0, 1 - (t - 0.68) / 0.2));
+      word.style.transform = 'translate(-50%,-58%) scale(' + (0.5 + aw * 0.5) + ')';
+    }
+    if (sub) {
+      sub.style.animation = 'none';
+      var ts = Math.min(1, Math.max(0, (t - 0.22) / 0.28));
+      sub.style.opacity = String(t < 0.72 ? easeOut(ts) : Math.max(0, 1 - (t - 0.72) / 0.22));
+    }
+
+    if (t > 0.62 && page) {
+      var tp = (t - 0.62) / 0.38;
+      var ep = easeInOut(Math.min(1, tp));
+      page.style.visibility = 'visible';
+      page.style.transform = 'scale(' + (1.1 - ep * 0.1) + ')';
+      page.style.transformOrigin = '50% 50%';
+      page.style.opacity = String(0.15 + ep * 0.85);
+    }
+    if (gate) gate.style.opacity = String(t < 0.78 ? 1 : Math.max(0, 1 - (t - 0.78) / 0.22));
+
+    if (t < 1) requestAnimationFrame(frame);
+    else closeEntrance();
+  }
+  requestAnimationFrame(frame);
+  setTimeout(closeEntrance, DUR + 120);
+  }
+
+  window.__LFG_restartIntro = runIntro;
+  if (root.classList.contains('lfg-preview-locked')) return;
+  runIntro();
+})();
+</script>
+<noscript><style>#lfg-entrance{display:none!important}#pageRoot{visibility:visible!important}</style></noscript>
+<div id="pageRoot">
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ============ NAV ============ -->
+<header class="header" id="header">
+  <nav class="wrap nav" aria-label="Primary">
+    <a href="#top" aria-label="The LFG Show, back to top"><img class="logo" src="logos/lfg-logo.svg" alt="The LFG Show" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'LFG SHOW',className:'display',style:'font-size:1.5rem'}))"></a>
+    <ul class="nav-links">
+      <li><a href="#the-show">The Show</a></li>
+      <li><a href="#episodes">Episodes</a></li>
+      <li><a href="#community">Community</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="btn btn-outline btn-sm nav-cta" data-magnetic href="#contact"><span>LET&rsquo;S CONNECT</span><span class="arr" aria-hidden="true">↗</span></a>
+    <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+  </nav>
+</header>
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu">
+  <ul>
+    <li><a class="big" href="#the-show">The Show</a></li>
+    <li><a class="big" href="#episodes">Episodes</a></li>
+    <li><a class="big" href="#community">Community</a></li>
+    <li><a class="big" href="#events">Events</a></li>
+    <li><a class="big" href="#contact">Contact</a></li>
+  </ul>
+  <a class="btn btn-solid" data-magnetic href="#contact"><span>LET&rsquo;S CONNECT</span><span class="arr" aria-hidden="true">↗</span></a>
+</div>
+
+<main id="main">
+
+<!-- ============ 01 HERO ============ -->
+<section class="hero" id="top" aria-label="Introduction">
+  <div class="hero-bg" id="heroStage" aria-hidden="true">
+    <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&amp;fit=crop&amp;w=1920&amp;q=80" alt="" fetchpriority="high" draggable="false" referrerpolicy="no-referrer">
+    <video class="photo" id="heroVideo" width="854" height="480" src="videos/lfg-hero.mp4" poster="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&amp;fit=crop&amp;w=1920&amp;q=80"
+           autoplay muted loop playsinline preload="auto" disablepictureinpicture tabindex="-1"></video>
+    <div class="hero-shade"></div>
+  </div>
+  <button type="button" class="hero-audio" id="heroAudioBtn" aria-pressed="false" aria-label="Activar audio del video">
+    <svg class="ico-sound-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path d="m16 9 6 6M22 9l-6 6"/></svg>
+    <svg class="ico-sound-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+  </button>
+  <div class="wrap hero-body" id="heroCopy">
+    <h1 class="hero-title" data-lines data-load data-delay=".5">
+      <span class="line"><span class="line-in">THIS IS</span></span>
+      <span class="line"><span class="line-in">MORE THAN</span></span>
+      <span class="line"><span class="line-in">A SHOW.</span></span>
+    </h1>
+    <p class="hero-2 rv" data-load data-delay="1.1">IT&rsquo;S A WHOLE DIFFERENT EXPERIENCE.</p>
+    <p class="hero-copy rv" data-load data-delay="1.25">Real conversations. Bold perspectives. A community built to go further.</p>
+    <div class="hero-ctas">
+      <div class="rv" data-load data-delay="1.4"><a class="btn btn-solid" data-magnetic href="#explore"><span>EXPLORE THE SHOW</span><span class="arr" aria-hidden="true">↗</span></a></div>
+      <div class="rv" data-load data-delay="1.55"><a class="btn btn-outline" data-magnetic href="#episodes"><span>WATCH NOW</span><span class="arr" aria-hidden="true">↗</span></a></div>
+    </div>
+  </div>
+  <div class="cue" aria-hidden="true"><span>Scroll</span><i></i></div>
+</section>
+
+<!-- ============ 02 EXPLORE ============ -->
+<section class="sec scroll-sec" id="explore" aria-labelledby="explore-title">
+  <div class="sec-parallax-bg" aria-hidden="true"><span class="orb orb--a"></span><span class="orb orb--b"></span></div>
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow rv">WELCOME TO THE EXPERIENCE</p>
+        <h2 class="display d-lg" id="explore-title" data-lines>
+          <span class="line"><span class="line-in">THREE WAYS.</span></span>
+          <span class="line"><span class="line-in">ONE MOVEMENT.</span></span>
+        </h2>
+      </div>
+      <p class="lead muted rv">Discover everything happening inside The LFG Show.</p>
+    </div>
+    <div class="cards">
+      <a class="card rv" href="#episodes">
+        <div class="media"><img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&amp;fit=crop&amp;w=1600&amp;h=900&amp;q=80" alt="Reference: microphone and studio setup for a conversation show" loading="eager" draggable="false" referrerpolicy="no-referrer"></div>
+        <div class="shade" aria-hidden="true"></div><div class="tint" aria-hidden="true"></div>
+        <p class="card-top"><b>01</b> — WATCH</p>
+        <div class="card-bot"><h3>THE CONVERSATIONS</h3><p>Explore the stories, perspectives and conversations that move us forward.</p><span class="cta">WATCH EPISODES <span class="arr" aria-hidden="true">↗</span></span></div>
+      </a>
+      <a class="card rv" data-delay=".08" href="#community">
+        <div class="media t-b"><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Reference: friends connecting at a community gathering" loading="eager" draggable="false" referrerpolicy="no-referrer"></div>
+        <div class="shade" aria-hidden="true"></div><div class="tint" aria-hidden="true"></div>
+        <p class="card-top"><b>02</b> — CONNECT</p>
+        <div class="card-bot"><h3>THE COMMUNITY</h3><p>Connect with people who believe in building, growing and making things happen.</p><span class="cta">JOIN THE COMMUNITY <span class="arr" aria-hidden="true">↗</span></span></div>
+      </a>
+      <a class="card rv" data-delay=".16" href="#events">
+        <div class="media t-c"><img src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Reference: live audience at an event experience" loading="eager" draggable="false" referrerpolicy="no-referrer"></div>
+        <div class="shade" aria-hidden="true"></div><div class="tint" aria-hidden="true"></div>
+        <p class="card-top"><b>03</b> — EXPERIENCE</p>
+        <div class="card-bot"><h3>THE EVENTS</h3><p>Go beyond the screen. Discover experiences, events and meaningful connections.</p><span class="cta">EXPLORE EVENTS <span class="arr" aria-hidden="true">↗</span></span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 ABOUT ============ -->
+<section class="sec bg-surface about scroll-sec" id="the-show" aria-labelledby="about-title">
+  <div class="sec-parallax-bg" aria-hidden="true"><span class="orb orb--b"></span><span class="orb orb--a"></span></div>
+  <div class="wrap about-grid">
+    <div class="about-img">
+      <div class="clip"><div class="parallax about-main" data-amount="7"><div class="parallax-in"><div class="media about-brand fill"><img src="logos/lfg-show-footer.png" alt="The LFG Show brand mark" width="512" height="512" loading="eager" draggable="false" onerror="this.onerror=null;this.src='logos/lfg-logo.svg';this.classList.add('about-logo-fallback')"></div></div></div></div>
+      <div class="about-sub clip" data-delay=".25"><div class="parallax" data-amount="12"><div class="parallax-in"><div class="media t-b fill"><img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Reference: team conversation behind the scenes" loading="eager" draggable="false" referrerpolicy="no-referrer"></div></div></div></div>
+    </div>
+    <div class="about-copy">
+      <p class="eyebrow rv">ABOUT THE SHOW</p>
+      <h2 class="display d-md" id="about-title" data-lines>
+        <span class="line"><span class="line-in">NOT JUST</span></span>
+        <span class="line"><span class="line-in">ANOTHER</span></span>
+        <span class="line"><span class="line-in">CONVERSATION.</span></span>
+      </h2>
+      <p class="lead rv">The LFG Show is a space for bold ideas, authentic conversations and the people shaping what comes next.</p>
+      <p class="lead rv" data-delay=".1">We bring together different perspectives, powerful stories and meaningful experiences that extend far beyond the screen.</p>
+      <p class="closing rv">THIS IS WHERE CONVERSATIONS BECOME CONNECTIONS.</p>
+      <div class="rv"><a class="btn btn-outline" data-magnetic data-href-key="story" href="#"><span>DISCOVER OUR STORY</span><span class="arr" aria-hidden="true">↗</span></a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 FEATURED CONTENT ============ -->
+<section class="sec scroll-sec" id="episodes" aria-labelledby="content-title">
+  <div class="sec-parallax-bg" aria-hidden="true"><span class="orb orb--a"></span></div>
+  <div class="wrap">
+    <div class="feat-head">
+      <p class="eyebrow rv">THE CONTENT</p>
+      <h2 class="display d-lg" id="content-title" data-lines>
+        <span class="line"><span class="line-in">CONVERSATIONS</span></span>
+        <span class="line"><span class="line-in">WORTH</span></span>
+        <span class="line"><span class="line-in">WATCHING.</span></span>
+      </h2>
+      <p class="note muted rv">Sample content. Titles and links are placeholders until real episodes are provided.</p>
+    </div>
+
+    <div class="rv">
+      <a class="ep ep-main" data-href-key="episodeFeatured" href="#" target="_blank" rel="noopener noreferrer">
+        <div class="media"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Reference: featured episode interview" loading="eager" draggable="false" referrerpolicy="no-referrer"></div>
+        <div class="shade" aria-hidden="true"></div>
+        <span class="play-xl" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+        <div class="info">
+          <div><p class="tag">FEATURED EPISODE</p><h3>Featured episode title goes here</h3></div>
+          <span class="watch">WATCH ON YOUTUBE <span class="arr" aria-hidden="true">↗</span></span>
+        </div>
+      </a>
+    </div>
+
+    <ul class="ep-grid">
+      <li class="rv"><a class="ep ep-s" data-href-key="episode2" href="#" target="_blank" rel="noopener noreferrer"><div class="media t-c"><img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Reference: episode conversation" loading="eager" draggable="false" referrerpolicy="no-referrer"></div><div class="shade" aria-hidden="true"></div><span class="play-s" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><div class="info"><p class="tag">EP. 02 · CONVERSATIONS</p><h3>Episode title placeholder</h3></div></a></li>
+      <li class="rv" data-delay=".1"><a class="ep ep-s" data-href-key="episode3" href="#" target="_blank" rel="noopener noreferrer"><div class="media t-d"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Reference: episode studio story" loading="eager" draggable="false" referrerpolicy="no-referrer"></div><div class="shade" aria-hidden="true"></div><span class="play-s" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><div class="info"><p class="tag">EP. 03 · STORIES</p><h3>Episode title placeholder</h3></div></a></li>
+      <li class="rv" data-delay=".2"><a class="ep ep-s" data-href-key="episode4" href="#" target="_blank" rel="noopener noreferrer"><div class="media t-b"><img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Reference: episode culture portrait" loading="eager" draggable="false" referrerpolicy="no-referrer"></div><div class="shade" aria-hidden="true"></div><span class="play-s" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><div class="info"><p class="tag">EP. 04 · CULTURE</p><h3>Episode title placeholder</h3></div></a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 05 COMMUNITY ============ -->
+<section class="community" id="community" aria-labelledby="community-title">
+  <div class="parallax" data-amount="9"><div class="parallax-in"><div class="media t-b fill"><img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&amp;fit=crop&amp;w=1920&amp;q=80" alt="Reference: community together outdoors" loading="eager" draggable="false" referrerpolicy="no-referrer"></div></div></div>
+  <div class="dim" aria-hidden="true"></div><div class="fade" aria-hidden="true"></div><div class="glow" aria-hidden="true"></div>
+  <div class="wrap">
+    <h2 class="display d-lg" id="community-title" data-lines>
+      <span class="line"><span class="line-in">GOOD</span></span>
+      <span class="line"><span class="line-in">CONVERSATIONS</span></span>
+      <span class="line"><span class="line-in">START HERE.</span></span>
+    </h2>
+    <p class="lead rv">Be part of a community that connects ideas, people and opportunities.</p>
+    <div class="rv"><a class="btn btn-solid" data-magnetic data-href-key="community" href="#" target="_blank" rel="noopener noreferrer"><span>JOIN THE COMMUNITY</span><span class="arr" aria-hidden="true">↗</span></a></div>
+  </div>
+</section>
+
+<!-- ============ 06 EVENTS ============ -->
+<section class="sec bg-surface scroll-sec" id="events" aria-labelledby="events-title">
+  <div class="sec-parallax-bg" aria-hidden="true"><span class="orb orb--b"></span><span class="orb orb--a"></span></div>
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow rv">EVENTS &amp; EXPERIENCES</p>
+        <h2 class="display d-lg" id="events-title" data-lines>
+          <span class="line"><span class="line-in">BEYOND</span></span>
+          <span class="line"><span class="line-in">THE SCREEN.</span></span>
+        </h2>
+      </div>
+      <div class="rv"><p class="lead" style="max-width:24rem">Real people. Real connections. Unforgettable experiences.</p><p class="muted" style="margin-top:16px;font-size:.875rem">Example content. No real dates, locations or tickets are shown here.</p></div>
+    </div>
+    <ul class="ev-grid">
+      <li class="rv ev-lg-li"><a class="ev ev-lg" data-href-key="eventLive" href="#" target="_blank" rel="noopener noreferrer"><div class="media"><img src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Reference: live experience audience" loading="eager" draggable="false" referrerpolicy="no-referrer"></div><div class="shade" aria-hidden="true"></div><div class="info"><p class="tag">Example content</p><h3>LIVE EXPERIENCES</h3><p>Example: shows and conversations in front of a live audience.</p></div></a></li>
+      <li class="rv"><a class="ev" data-href-key="eventCommunity" href="#" target="_blank" rel="noopener noreferrer"><div class="media t-c"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Reference: community gathering meetup" loading="eager" draggable="false" referrerpolicy="no-referrer"></div><div class="shade" aria-hidden="true"></div><div class="info"><p class="tag">Example content</p><h3>COMMUNITY GATHERINGS</h3><p>Example: smaller meetups for the people in the community.</p></div></a></li>
+      <li class="rv" data-delay=".1"><a class="ev" data-href-key="eventSpecial" href="#" target="_blank" rel="noopener noreferrer"><div class="media t-d"><img src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?auto=format&amp;fit=crop&amp;w=1600&amp;h=1200&amp;crop=top&amp;q=80" alt="Reference: special event stage" loading="eager" draggable="false" referrerpolicy="no-referrer"></div><div class="shade" aria-hidden="true"></div><div class="info"><p class="tag">Example content</p><h3>SPECIAL EVENTS</h3><p>Example: one-off collaborations and partner experiences.</p></div></a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 07 PARTNERSHIPS ============ -->
+<section class="partners scroll-sec" id="partnerships" aria-labelledby="partners-title">
+  <div class="bgm" aria-hidden="true"><div class="blob a"></div><div class="blob b"></div></div>
+  <div class="wrap">
+    <p class="eyebrow rv">LET&rsquo;S BUILD SOMETHING</p>
+    <h2 class="display d-lg" id="partners-title" data-lines>
+      <span class="line"><span class="line-in">GREAT THINGS</span></span>
+      <span class="line"><span class="line-in">HAPPEN</span></span>
+      <span class="line"><span class="line-in">TOGETHER.</span></span>
+    </h2>
+    <p class="lead rv">Partner with The LFG Show to create meaningful experiences, powerful conversations and new opportunities.</p>
+    <div class="btns">
+      <div class="rv"><a class="btn btn-solid" data-magnetic href="#contact"><span>BECOME A PARTNER</span><span class="arr" aria-hidden="true">↗</span></a></div>
+      <div class="rv" data-delay=".12"><a class="btn btn-outline" data-magnetic href="#contact"><span>LET&rsquo;S TALK</span><span class="arr" aria-hidden="true">↗</span></a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 08 CONTACT ============ -->
+<section class="sec bg-surface scroll-sec" id="contact" aria-labelledby="contact-title">
+  <div class="sec-parallax-bg" aria-hidden="true"><span class="orb orb--a"></span></div>
+  <div class="wrap contact-grid">
+    <div class="c-left">
+      <p class="eyebrow rv">CONTACT</p>
+      <h2 class="display d-md" id="contact-title" data-lines>
+        <span class="line"><span class="line-in">LET&rsquo;S MAKE</span></span>
+        <span class="line"><span class="line-in">SOMETHING</span></span>
+        <span class="line"><span class="line-in">HAPPEN.</span></span>
+      </h2>
+      <p class="lead rv">Have an idea, a question or an opportunity? We&rsquo;d love to hear from you.</p>
+    </div>
+    <div class="c-right rv">
+      <form class="form" id="form" novalidate>
+        <div class="hp" aria-hidden="true"><label for="company">Company</label><input id="company" name="company" type="text" tabindex="-1" autocomplete="off"></div>
+        <div class="f"><label for="name">Full Name <span aria-hidden="true">*</span></label><input id="name" name="name" type="text" autocomplete="name" required><p class="err" id="name-err" role="alert" hidden></p></div>
+        <div class="f"><label for="email">Email Address <span aria-hidden="true">*</span></label><input id="email" name="email" type="email" autocomplete="email" required><p class="err" id="email-err" role="alert" hidden></p></div>
+        <div class="f"><label for="interest">What are you interested in? <span aria-hidden="true">*</span></label>
+          <div class="sel"><select id="interest" name="interest" required><option value="" disabled selected>Select an option</option><option>Partnerships</option><option>Events</option><option>Community</option><option>General Inquiry</option></select>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></div>
+          <p class="err" id="interest-err" role="alert" hidden></p></div>
+        <div class="f"><label for="message">Message <span aria-hidden="true">*</span></label><textarea id="message" name="message" rows="4" required></textarea><p class="err" id="message-err" role="alert" hidden></p></div>
+        <div aria-live="polite"><p class="alert" id="form-error" role="alert" hidden>Something went wrong sending your message. Please try again in a moment.</p></div>
+        <div><button class="btn btn-solid" id="submit" type="submit" data-magnetic><span id="submit-label">SEND MESSAGE</span><span class="arr" aria-hidden="true">↗</span></button></div>
+      </form>
+      <div class="ok" id="form-ok" role="status" aria-live="polite" hidden>
+        <h3>Message sent.</h3><p>Thanks for reaching out. The LFG team will get back to you soon.</p>
+        <button type="button" id="again">Send another message</button>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<script>
+(function(){
+  var video=document.getElementById('heroVideo'), stage=document.getElementById('heroStage'), audioBtn=document.getElementById('heroAudioBtn');
+  if(!video) return;
+  function usePosterOnly(){
+    if(stage) stage.classList.add('is-poster-only');
+    video.classList.remove('ready');
+    video.pause();
+    try{ video.removeAttribute('src'); video.load(); }catch(e){}
+  }
+  function setAudio(on){
+    video.muted=!on;
+    if(on){ var p=video.play(); if(p&&p.catch) p.catch(function(){}); }
+    if(audioBtn){
+      audioBtn.setAttribute('aria-pressed',String(on));
+      audioBtn.setAttribute('aria-label',on?'Silenciar audio del video':'Activar audio del video');
+    }
+  }
+  if(audioBtn){ audioBtn.addEventListener('click',function(){ if(stage&&stage.classList.contains('is-poster-only')) return; setAudio(video.muted); }); }
+  video.addEventListener('error', usePosterOnly);
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches){ usePosterOnly(); }
+  else {
+    video.muted=true;
+    video.addEventListener('loadeddata',function(){ video.classList.add('ready'); });
+    var p=video.play();
+    if(p&&p.catch) p.catch(function(){ usePosterOnly(); });
+  }
+})();
+</script>
+<!-- ============ 09 FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <nav aria-label="Footer"><h4>Navigate</h4>
+        <ul class="foot-nav"><li><a href="#top">Home</a></li><li><a href="#the-show">About</a></li><li><a href="#episodes">Episodes</a></li><li><a href="#community">Community</a></li><li><a href="#events">Events</a></li><li><a href="#contact">Contact</a></li></ul>
+      </nav>
+      <div><h4>Follow</h4>
+        <ul class="foot-soc">
+          <li><a data-href-key="youtube" href="#" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+          <li><a data-href-key="instagram" href="#" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a data-href-key="spotify" href="#" target="_blank" rel="noopener noreferrer">Spotify</a></li>
+          <li><a data-href-key="tiktok" href="#" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-meta"><p>© 2026 The LFG Show. All rights reserved.</p><a data-href-key="privacy" href="#">Privacy Policy</a></div>
+  </div>
+  <p class="foot-big" aria-hidden="true">THE LFG SHOW</p>
+</footer>
+</div><!-- /#pageRoot -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+/* =========================================================================
+   CONFIG — everything you normally need to edit is here.
+   ========================================================================= */
+const CONFIG = {
+  // Pantalla previa: círculo verde + zoom a toda la página (no solo el hero).
+  introLoader: true,
+
+  // Clave de preview: edita window.__LFG_CONFIG_PREVIEW__ al inicio del <head> (enabled / password).
+
+  // Faint text tiled across the whole page (traceable screenshots).
+  watermark: 'PRIVATE PREVIEW · DO NOT SHARE',
+
+  // Turn the deterrents (right-click, copy, DevTools shortcuts) on/off.
+  protect: true,
+
+  // Contact form: set to a URL that accepts POST JSON { name, email, interest, message }.
+  // While null, the form runs in demo mode (validates, shows success, sends nothing).
+  formEndpoint: null,
+
+  // Real URLs. null = the link is shown disabled as "coming soon" (no dead links).
+  links: {
+    story: null,
+    episodeFeatured: null, episode2: null, episode3: null, episode4: null,
+    community: null,
+    eventLive: null, eventCommunity: null, eventSpecial: null,
+    youtube: null, instagram: null, spotify: null, tiktok: null,
+    privacy: null
+  }
+};
+
+(function () {
+  'use strict';
+  var root = document.documentElement;
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var lowPower = (navigator.hardwareConcurrency || 8) <= 2 || (navigator.deviceMemory || 8) <= 2;
+  var hasGsap = !!(window.gsap && window.ScrollTrigger);
+  if (!hasGsap || reduce) { root.classList.remove('js'); }   // content stays visible if GSAP can't load or motion is reduced
+  else { gsap.registerPlugin(ScrollTrigger); }
+  var $ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
+  var scrollAnimationsStarted = false;
+
+  function runScrollAnimations() {
+    if (scrollAnimationsStarted || !hasGsap || reduce) return;
+    scrollAnimationsStarted = true;
+    // Headings: line-by-line masked reveal
+    $('[data-lines]').forEach(function (h) {
+      var load = h.hasAttribute('data-load');
+      gsap.fromTo($('.line-in', h), { yPercent: 110 }, {
+        yPercent: 0, duration: 1.1, ease: 'expo.out', stagger: 0.12,
+        delay: parseFloat(h.getAttribute('data-delay') || 0),
+        scrollTrigger: load ? null : { trigger: h, start: 'top 86%', once: true }
+      });
+    });
+
+    $('.rv').forEach(function (el) {
+      var load = el.hasAttribute('data-load');
+      gsap.fromTo(el, { opacity: 0, y: 32 }, {
+        opacity: 1, y: 0, duration: 1, ease: 'power3.out',
+        delay: parseFloat(el.getAttribute('data-delay') || 0),
+        scrollTrigger: load ? null : { trigger: el, start: 'top 90%', once: true }
+      });
+    });
+
+    $('.clip').forEach(function (el) {
+      gsap.fromTo(el, { clipPath: 'inset(100% 0% 0% 0%)' }, {
+        clipPath: 'inset(0% 0% 0% 0%)', duration: 1.3, ease: 'expo.inOut',
+        delay: parseFloat(el.getAttribute('data-delay') || 0),
+        scrollTrigger: { trigger: el, start: 'top 88%', once: true }
+      });
+    });
+  }
+
+  function afterIntro() {
+    runScrollAnimations();
+  }
+  if (!CONFIG.introLoader && typeof window.__LFG_finishIntroEarly === 'function') {
+    window.__LFG_finishIntroEarly();
+  }
+  if (root.classList.contains('intro-done') || window.__LFG_INTRO_FINISHED) {
+    afterIntro();
+  } else {
+    window.addEventListener('lfg:intro-done', afterIntro, { once: true });
+  }
+
+  /* ---- Links: fill from CONFIG or mark as "coming soon" ---- */
+  $('[data-href-key]').forEach(function (a) {
+    var url = CONFIG.links[a.getAttribute('data-href-key')];
+    if (url) { a.setAttribute('href', url); return; }
+    a.classList.add('is-off');
+    a.setAttribute('aria-disabled', 'true');
+    a.setAttribute('title', 'Link coming soon');
+    a.removeAttribute('target');
+    a.addEventListener('click', function (e) { e.preventDefault(); });
+  });
+
+  /* ---- Header solid on scroll ---- */
+  var header = document.getElementById('header');
+  var onScroll = function () { header.classList.toggle('is-solid', window.scrollY > 40 || menu.classList.contains('is-open')); };
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  /* ---- Mobile menu ---- */
+  var burger = document.getElementById('burger');
+  var menu = document.getElementById('menu');
+  function setMenu(open) {
+    menu.classList.toggle('is-open', open);
+    burger.setAttribute('aria-expanded', String(open));
+    burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    document.body.style.overflow = open ? 'hidden' : '';
+    onScroll();
+  }
+  burger.addEventListener('click', function () { setMenu(!menu.classList.contains('is-open')); });
+  $('a', menu).forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+  window.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+  onScroll();
+
+  /* ---- Parallax (skipped on reduced motion / low power) ---- */
+  $('.parallax').forEach(function (box) {
+    var inner = box.querySelector('.parallax-in');
+    var amt = parseFloat(box.getAttribute('data-amount') || 8);
+    inner.style.top = '-' + (amt * 1.3) + '%';
+    inner.style.bottom = '-' + (amt * 1.3) + '%';
+    if (!hasGsap || reduce || lowPower) return;
+    gsap.fromTo(inner, { yPercent: -amt }, {
+      yPercent: amt, ease: 'none',
+      scrollTrigger: { trigger: box, start: 'top bottom', end: 'bottom top', scrub: true }
+    });
+  });
+
+  if (hasGsap && !reduce && !lowPower) {
+    var hero = document.querySelector('.hero');
+    var heroPhoto = document.getElementById('heroVideo');
+    if (hero && heroPhoto) {
+      gsap.to(heroPhoto, {
+        y: -48, ease: 'none',
+        scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom top', scrub: 0.55 }
+      });
+      gsap.to('.hero-body', {
+        y: -72, ease: 'none',
+        scrollTrigger: { trigger: hero, start: 'top top', end: '75% top', scrub: 0.55 }
+      });
+    }
+  }
+
+  /* ---- Magnetic buttons + subtle image drift on tiles ---- */
+  if (hasGsap && !reduce && matchMedia('(pointer: fine)').matches) {
+    $('.btn').forEach(function (el) {
+      el.addEventListener('mousemove', function (e) {
+        var r = el.getBoundingClientRect();
+        gsap.to(el, {
+          x: (e.clientX - r.left - r.width / 2) * 0.2,
+          y: (e.clientY - r.top - r.height / 2) * 0.28,
+          duration: 0.35,
+          ease: 'power3.out'
+        });
+      });
+      el.addEventListener('mouseleave', function () {
+        gsap.to(el, { x: 0, y: 0, duration: 0.65, ease: 'elastic.out(1,0.55)' });
+      });
+    });
+    $('.card, .ep, .ev').forEach(function (tile) {
+      var media = tile.querySelector('.media');
+      if (!media) return;
+      tile.addEventListener('mousemove', function (e) {
+        var r = tile.getBoundingClientRect();
+        var dx = (e.clientX - r.left - r.width / 2) / r.width;
+        var dy = (e.clientY - r.top - r.height / 2) / r.height;
+        gsap.to(media, { x: dx * 16, y: dy * 10, duration: 0.5, ease: 'power3.out' });
+      });
+      tile.addEventListener('mouseleave', function () {
+        gsap.to(media, { x: 0, y: 0, duration: 0.55, ease: 'power3.out' });
+      });
+    });
+  }
+  if (hasGsap) {
+    window.addEventListener('load', function () {
+      ScrollTrigger.refresh();
+      // Safety: never leave scroll-reveal content invisible if a trigger did not run
+      requestAnimationFrame(function () {
+        $('.rv').forEach(function (el) {
+          if (parseFloat(getComputedStyle(el).opacity) < 0.01 && el.getBoundingClientRect().top < window.innerHeight * 0.92) {
+            el.style.opacity = '1'; el.style.transform = 'none';
+          }
+        });
+        $('.clip').forEach(function (el) {
+          var cp = getComputedStyle(el).clipPath || '';
+          if (cp.indexOf('100%') > -1 && el.getBoundingClientRect().top < window.innerHeight * 0.92) {
+            el.style.clipPath = 'inset(0)';
+          }
+        });
+      });
+    });
+  }
+
+  /* ---- Contact form ---- */
+  var form = document.getElementById('form');
+  var ok = document.getElementById('form-ok');
+  var formErr = document.getElementById('form-error');
+  var submit = document.getElementById('submit');
+  var label = document.getElementById('submit-label');
+  var EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  // NOTE: form.name is the <form>'s own name, not the input, so fields are fetched by id.
+  var fld = function (id) { return document.getElementById(id); };
+
+  function showErr(field, msg) {
+    var input = document.getElementById(field), err = document.getElementById(field + '-err');
+    if (msg) { err.textContent = msg; err.hidden = false; input.setAttribute('aria-invalid', 'true'); input.setAttribute('aria-describedby', field + '-err'); }
+    else { err.hidden = true; input.removeAttribute('aria-invalid'); input.removeAttribute('aria-describedby'); }
+  }
+  function validate() {
+    var v = { name: fld('name').value.trim(), email: fld('email').value.trim(), interest: fld('interest').value, message: fld('message').value.trim() };
+    var e = {};
+    if (v.name.length < 2) e.name = 'Please enter your full name.';
+    if (!v.email) e.email = 'Email address is required.';
+    else if (!EMAIL.test(v.email)) e.email = 'Enter a valid email address.';
+    if (!v.interest) e.interest = 'Choose what you are interested in.';
+    if (v.message.length < 10) e.message = 'Tell us a little more (at least 10 characters).';
+    ['name', 'email', 'interest', 'message'].forEach(function (k) { showErr(k, e[k]); });
+    return { values: v, errors: e };
+  }
+  ['name', 'email', 'interest', 'message'].forEach(function (k) {
+    fld(k).addEventListener('input', function () { showErr(k, null); });
+  });
+  form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    if (submit.disabled) return;
+    formErr.hidden = true;
+    var res = validate();
+    var first = Object.keys(res.errors)[0];
+    if (first) { fld(first).focus(); return; }
+    if (fld('company').value) return; // honeypot
+
+    submit.disabled = true; label.textContent = 'SENDING...';
+    var send = CONFIG.formEndpoint
+      ? fetch(CONFIG.formEndpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(res.values) })
+          .then(function (r) { if (!r.ok) throw new Error('failed'); })
+      : new Promise(function (r) { setTimeout(r, 900); }); // demo mode
+    send.then(function () {
+      form.reset(); form.hidden = true; ok.hidden = false;
+    }).catch(function () {
+      formErr.hidden = false;
+    }).then(function () {
+      submit.disabled = false; label.textContent = 'SEND MESSAGE';
+    });
+  });
+  document.getElementById('again').addEventListener('click', function () { ok.hidden = true; form.hidden = false; fld('name').focus(); });
+
+  /* ---- Deterrents (they raise the effort; they cannot make client-side code secret) ---- */
+  if (CONFIG.protect) {
+    var isField = function (t) { return t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.tagName === 'SELECT' || t.isContentEditable); };
+    document.addEventListener('contextmenu', function (e) { e.preventDefault(); });
+    document.addEventListener('copy', function (e) { if (!isField(e.target)) e.preventDefault(); });
+    document.addEventListener('cut', function (e) { if (!isField(e.target)) e.preventDefault(); });
+    document.addEventListener('dragstart', function (e) { e.preventDefault(); });
+    document.addEventListener('keydown', function (e) {
+      var k = (e.key || '').toLowerCase(), mod = e.ctrlKey || e.metaKey;
+      if (e.key === 'F12' || (mod && e.shiftKey && 'ijck'.indexOf(k) > -1 && k.length === 1) || (mod && 'usp'.indexOf(k) > -1 && k.length === 1) || (e.metaKey && e.altKey && 'ijuc'.indexOf(k) > -1 && k.length === 1)) {
+        e.preventDefault(); e.stopPropagation();
+      }
+    }, true);
+  }
+  /* ---- Reference images: fallback if a remote URL fails ---- */
+  document.querySelectorAll('.media img, .hero-bg > img').forEach(function (img) {
+    img.addEventListener('error', function () {
+      if (img.dataset.fallbackApplied) return;
+      img.dataset.fallbackApplied = '1';
+      var seed = (img.alt || 'lfg-ref').replace(/\W+/g, '-').slice(0, 24) || 'lfg-ref';
+      img.src = 'https://picsum.photos/seed/' + encodeURIComponent(seed) + '/1600/900';
+    }, { once: true });
+  });
+
+  if (CONFIG.watermark) {
+    var safe = String(CONFIG.watermark).replace(/&/g, '&amp;').replace(/</g, '&lt;');
+    var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="420" height="260"><text x="30" y="150" transform="rotate(-24 30 150)" fill="rgba(255,255,255,0.07)" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" letter-spacing="3">' + safe + '</text></svg>';
+    var wm = document.createElement('div');
+    wm.setAttribute('aria-hidden', 'true');
+    wm.style.cssText = 'position:fixed;inset:0;z-index:60;pointer-events:none;user-select:none;background-repeat:repeat;background-image:url("data:image/svg+xml,' + encodeURIComponent(svg) + '")';
+    document.body.appendChild(wm);
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+LFG Show — enlace oculto SIN contraseña (fácil de borrar)
+=========================================================
+
+PUBLICAR (una vez)
+------------------
+1) Terminal:
+
+cd ~/Downloads
+git clone https://github.com/samarisso-wq/Portafolio_SamarisSanchez_productDesigner.git
+mkdir -p Portafolio_SamarisSanchez_productDesigner/preview/lfg-show-x7k9m2
+cp -R Demo.html/lfg-show-x7k9m2/* Portafolio_SamarisSanchez_productDesigner/preview/lfg-show-x7k9m2/
+
+2) Subir:
+
+cd Portafolio_SamarisSanchez_productDesigner
+git add preview/
+git commit -m "Add LFG Show preview"
+git push origin main
+
+3) En 2–5 min, comparte SOLO este link (no lo pongas en el menú del portafolio):
+
+   https://www.samarissanchez.com/preview/lfg-show-x7k9m2/
+
+Seguridad sin contraseña: noindex en la página + nadie la encuentra si no tiene el link.
+
+ELIMINAR CUANDO QUIERAS
+-----------------------
+cd ~/Downloads/Portafolio_SamarisSanchez_productDesigner
+git rm -r preview/lfg-show-x7k9m2
+git commit -m "Remove LFG Show preview"
+git push origin main
+
+Listo: el link deja de existir en unos minutos.
