@@ -1,3 +1,0 @@
-# Copia esto a robots.txt en la RAÍZ del repo Portafolio (junto al index.html principal)
-User-agent: *
-Disallow: /preview/
